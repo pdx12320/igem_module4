@@ -1,0 +1,17 @@
+{
+  "eval_loss": 0.6120158433914185,
+  "eval_accuracy": 0.6995305164319249,
+  "eval_precision": 0.7559523809523809,
+  "eval_recall": 0.8466666666666667,
+  "eval_f1": 0.7987421383647799,
+  "eval_roc_auc": 0.65005291005291,
+  "eval_pr_auc": 0.8100144358544475,
+  "eval_true_negative": 22,
+  "eval_false_positive": 41,
+  "eval_false_negative": 23,
+  "eval_true_positive": 127,
+  "eval_runtime": 1.4657,
+  "eval_samples_per_second": 145.32,
+  "eval_steps_per_second": 9.552,
+  "epoch": 7.0
+}

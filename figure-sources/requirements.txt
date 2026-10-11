@@ -1,0 +1,4 @@
+# Versions used for the committed figures; install only in an isolated environment.
+matplotlib==3.10.8
+numpy==2.5.3
+pillow==12.3.0

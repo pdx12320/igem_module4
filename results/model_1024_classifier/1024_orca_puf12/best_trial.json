@@ -1,0 +1,11 @@
+{
+  "trial_number": 17,
+  "validation_pr_auc": 0.8134355864775149,
+  "params": {
+    "batch_config": "batch4_accum2",
+    "learning_rate": 6.706824153824951e-05,
+    "weight_decay": 7.919413614819866e-06,
+    "token_dropout": 0.005515807069728134,
+    "warmup_ratio": 0.05338263866669417
+  }
+}

@@ -1,0 +1,50 @@
+{
+  "template_version": "orca-data-1.1",
+  "font": "Futura",
+  "cjk_font": "Arial Unicode MS",
+  "notes": [],
+  "runtime": {
+    "python": "3.12.14",
+    "matplotlib": "3.10.8",
+    "numpy": "2.5.3"
+  },
+  "export": {
+    "width_in": 10.0,
+    "height_in": 6.7,
+    "dpi": 192.0,
+    "display_width_px": 960,
+    "svg_text": "paths",
+    "pdf_fonttype": 42
+  },
+  "provenance": {
+    "audience": "iGEM wiki, 960 CSS px display width",
+    "uncertainty": "No error intervals or significance tests; no independent replicate estimates supplied",
+    "exclusions": "No observations removed for outlier status or aesthetics",
+    "smoothing": "None",
+    "random_seed": null,
+    "plot_script": {
+      "path": "figure-sources/plot.py",
+      "sha256": "462b7424ba7d1a3facbb3a80f00358d4501ac37d1b283b276fb7e366d7797469",
+      "read_range": "complete script"
+    },
+    "sources": [
+      {
+        "path": "provenance/source-documents/01_WIKI.md",
+        "sha256": "3e92bc7ea72e30b4efda0bcf2b6496433a7525d22df77fcff74d79d374d7c4c4",
+        "read_range": "Stage II / Test results table: Hit@K and Recall@K"
+      }
+    ],
+    "chart_type": "unconnected discrete points at original K values",
+    "evidence_status": "draft-reported summary; per-site ranking output unavailable",
+    "analysis_unit": "region with at least one labelled positive site",
+    "n": {
+      "evaluated_positive_regions": 140,
+      "nonpositive_regions_skipped_by_existing_method": 72
+    },
+    "transforms": [
+      "parse supplied draft table; no changes to rounded values"
+    ],
+    "missing": "Recall@1 absent in source; not inferred",
+    "method_scope": "conditional positive-region ranking, not Stage I-gated end-to-end evaluation"
+  }
+}

@@ -1,0 +1,523 @@
+{
+  "archive_name": "ORCA_EditPredict.zip",
+  "entries": [
+    {
+      "source_member": "ORCA_EditPredict/01_WIKI.md",
+      "uncompressed_bytes": 20280,
+      "archive_crc32": "53001fee",
+      "published_path": "provenance/source-documents/01_WIKI.md",
+      "status": "published"
+    },
+    {
+      "source_member": "ORCA_EditPredict/02_DBTL.md",
+      "uncompressed_bytes": 17352,
+      "archive_crc32": "e239b8ec",
+      "published_path": "provenance/source-documents/02_DBTL.md",
+      "status": "published"
+    },
+    {
+      "source_member": "ORCA_EditPredict/assets/Figure 1.png",
+      "uncompressed_bytes": 789798,
+      "archive_crc32": "63dcc51b",
+      "published_path": null,
+      "status": "retained in source archive; not uploaded"
+    },
+    {
+      "source_member": "ORCA_EditPredict/assets/Figure 2.png",
+      "uncompressed_bytes": 206662,
+      "archive_crc32": "1f0dac52",
+      "published_path": null,
+      "status": "retained in source archive; not uploaded"
+    },
+    {
+      "source_member": "ORCA_EditPredict/assets/Figure 3_a.png",
+      "uncompressed_bytes": 141246,
+      "archive_crc32": "51261ab7",
+      "published_path": null,
+      "status": "retained in source archive; not uploaded"
+    },
+    {
+      "source_member": "ORCA_EditPredict/assets/Figure 3_b.png",
+      "uncompressed_bytes": 191567,
+      "archive_crc32": "7fabe026",
+      "published_path": null,
+      "status": "retained in source archive; not uploaded"
+    },
+    {
+      "source_member": "ORCA_EditPredict/assets/Figure 4.png",
+      "uncompressed_bytes": 174577,
+      "archive_crc32": "78097e48",
+      "published_path": null,
+      "status": "retained in source archive; not uploaded"
+    },
+    {
+      "source_member": "ORCA_EditPredict/config_150M.json",
+      "uncompressed_bytes": 779,
+      "archive_crc32": "b2ec2021",
+      "published_path": "code/historical/config_150M.json",
+      "status": "published"
+    },
+    {
+      "source_member": "ORCA_EditPredict/data/101nt_dataset/orca_puf12_test.json",
+      "uncompressed_bytes": 2346629,
+      "archive_crc32": "f5be38a4",
+      "published_path": "data/101nt_dataset/orca_puf12_test.json",
+      "status": "published"
+    },
+    {
+      "source_member": "ORCA_EditPredict/data/101nt_dataset/orca_puf12_train.json",
+      "uncompressed_bytes": 21074964,
+      "archive_crc32": "b24b1324",
+      "published_path": "data/101nt_dataset/orca_puf12_train.json",
+      "status": "published"
+    },
+    {
+      "source_member": "ORCA_EditPredict/data/101nt_dataset/orca_puf12_valid.json",
+      "uncompressed_bytes": 2338318,
+      "archive_crc32": "57f579a1",
+      "published_path": "data/101nt_dataset/orca_puf12_valid.json",
+      "status": "published"
+    },
+    {
+      "source_member": "ORCA_EditPredict/data/1024nt_dataset/orca_puf12_test.csv",
+      "uncompressed_bytes": 195322,
+      "archive_crc32": "18a4e6bd",
+      "published_path": "data/1024nt_dataset/orca_puf12_test.csv",
+      "status": "published"
+    },
+    {
+      "source_member": "ORCA_EditPredict/data/1024nt_dataset/orca_puf12_train.csv",
+      "uncompressed_bytes": 3498987,
+      "archive_crc32": "4b29ce54",
+      "published_path": "data/1024nt_dataset/orca_puf12_train.csv",
+      "status": "published"
+    },
+    {
+      "source_member": "ORCA_EditPredict/data/1024nt_dataset/orca_puf12_valid.csv",
+      "uncompressed_bytes": 194564,
+      "archive_crc32": "a44e1075",
+      "published_path": "data/1024nt_dataset/orca_puf12_valid.csv",
+      "status": "published"
+    },
+    {
+      "source_member": "ORCA_EditPredict/data/gencode.v50.chr_patch_hapl_scaff.annotation.gtf",
+      "uncompressed_bytes": 4812485671,
+      "archive_crc32": "9f3e4214",
+      "published_path": null,
+      "status": "retained in source archive; not uploaded"
+    },
+    {
+      "source_member": "ORCA_EditPredict/data/gencode.v50.transcripts.fa",
+      "uncompressed_bytes": 1481507202,
+      "archive_crc32": "3772040a",
+      "published_path": null,
+      "status": "retained in source archive; not uploaded"
+    },
+    {
+      "source_member": "ORCA_EditPredict/data/pretrain_dataset/human_transcriptome_pretraining_test.txt",
+      "uncompressed_bytes": 79740325,
+      "archive_crc32": "94f66ae8",
+      "published_path": null,
+      "status": "retained in source archive; not uploaded"
+    },
+    {
+      "source_member": "ORCA_EditPredict/data/pretrain_dataset/human_transcriptome_pretraining_train.txt",
+      "uncompressed_bytes": 1439258635,
+      "archive_crc32": "29faabf2",
+      "published_path": null,
+      "status": "retained in source archive; not uploaded"
+    },
+    {
+      "source_member": "ORCA_EditPredict/data/pretrain_dataset/human_transcriptome_pretraining_valid.txt",
+      "uncompressed_bytes": 79962255,
+      "archive_crc32": "05444179",
+      "published_path": null,
+      "status": "retained in source archive; not uploaded"
+    },
+    {
+      "source_member": "ORCA_EditPredict/data/PUF12_positive_with_strand.tsv",
+      "uncompressed_bytes": 2371151,
+      "archive_crc32": "7c290607",
+      "published_path": "data/PUF12_positive_with_strand.tsv",
+      "status": "published"
+    },
+    {
+      "source_member": "ORCA_EditPredict/model_101_classifier/best_model/config.json",
+      "uncompressed_bytes": 904,
+      "archive_crc32": "6d01b52a",
+      "published_path": "results/model_101_classifier/best_model/config.json",
+      "status": "published"
+    },
+    {
+      "source_member": "ORCA_EditPredict/model_101_classifier/best_model/model.safetensors",
+      "uncompressed_bytes": 345806960,
+      "archive_crc32": "299ca632",
+      "published_path": null,
+      "status": "retained in source archive; not uploaded"
+    },
+    {
+      "source_member": "ORCA_EditPredict/model_101_classifier/best_model/special_tokens_map.json",
+      "uncompressed_bytes": 125,
+      "archive_crc32": "875bad3a",
+      "published_path": "results/model_101_classifier/best_model/special_tokens_map.json",
+      "status": "published"
+    },
+    {
+      "source_member": "ORCA_EditPredict/model_101_classifier/best_model/tokenizer_config.json",
+      "uncompressed_bytes": 107,
+      "archive_crc32": "90c40ae5",
+      "published_path": "results/model_101_classifier/best_model/tokenizer_config.json",
+      "status": "published"
+    },
+    {
+      "source_member": "ORCA_EditPredict/model_101_classifier/best_model/training_state.json",
+      "uncompressed_bytes": 299,
+      "archive_crc32": "439b21e2",
+      "published_path": "results/model_101_classifier/best_model/training_state.json.txt",
+      "status": "published"
+    },
+    {
+      "source_member": "ORCA_EditPredict/model_101_classifier/best_model/vocab.txt",
+      "uncompressed_bytes": 40,
+      "archive_crc32": "03290414",
+      "published_path": "results/model_101_classifier/best_model/vocab.txt",
+      "status": "published"
+    },
+    {
+      "source_member": "ORCA_EditPredict/model_101_classifier/evaluation_top_ranking.py",
+      "uncompressed_bytes": 11918,
+      "archive_crc32": "83b36622",
+      "published_path": "code/historical/model_101_classifier/evaluation_top_ranking.py",
+      "status": "published"
+    },
+    {
+      "source_member": "ORCA_EditPredict/model_101_classifier/train_orca_ranking_101.py",
+      "uncompressed_bytes": 16435,
+      "archive_crc32": "a7853506",
+      "published_path": "code/historical/model_101_classifier/train_orca_ranking_101.py",
+      "status": "published"
+    },
+    {
+      "source_member": "ORCA_EditPredict/model_1024_classifier/1024_lamar_puf12/final_model/checkpoint-1380/model.safetensors",
+      "uncompressed_bytes": 345810052,
+      "archive_crc32": "5afde0d5",
+      "published_path": null,
+      "status": "retained in source archive; not uploaded"
+    },
+    {
+      "source_member": "ORCA_EditPredict/model_1024_classifier/1024_lamar_puf12/final_model/checkpoint-1380/special_tokens_map.json",
+      "uncompressed_bytes": 125,
+      "archive_crc32": "875bad3a",
+      "published_path": "results/model_1024_classifier/1024_lamar_puf12/final_model/checkpoint-1380/special_tokens_map.json",
+      "status": "published"
+    },
+    {
+      "source_member": "ORCA_EditPredict/model_1024_classifier/1024_lamar_puf12/final_model/checkpoint-1380/tokenizer_config.json",
+      "uncompressed_bytes": 108,
+      "archive_crc32": "87605cae",
+      "published_path": "results/model_1024_classifier/1024_lamar_puf12/final_model/checkpoint-1380/tokenizer_config.json",
+      "status": "published"
+    },
+    {
+      "source_member": "ORCA_EditPredict/model_1024_classifier/1024_lamar_puf12/final_model/checkpoint-1380/trainer_state.json",
+      "uncompressed_bytes": 19185,
+      "archive_crc32": "66d0b0a6",
+      "published_path": "results/model_1024_classifier/1024_lamar_puf12/final_model/checkpoint-1380/trainer_state.json",
+      "status": "published"
+    },
+    {
+      "source_member": "ORCA_EditPredict/model_1024_classifier/1024_lamar_puf12/final_model/checkpoint-1380/vocab.txt",
+      "uncompressed_bytes": 40,
+      "archive_crc32": "03290414",
+      "published_path": "results/model_1024_classifier/1024_lamar_puf12/final_model/checkpoint-1380/vocab.txt",
+      "status": "published"
+    },
+    {
+      "source_member": "ORCA_EditPredict/model_1024_classifier/1024_lamar_puf12_frozen_encoder/final_model/checkpoint-1440/model.safetensors",
+      "uncompressed_bytes": 345810052,
+      "archive_crc32": "1d6b1abf",
+      "published_path": null,
+      "status": "retained in source archive; not uploaded"
+    },
+    {
+      "source_member": "ORCA_EditPredict/model_1024_classifier/1024_lamar_puf12_frozen_encoder/final_model/checkpoint-1440/special_tokens_map.json",
+      "uncompressed_bytes": 125,
+      "archive_crc32": "875bad3a",
+      "published_path": "results/model_1024_classifier/1024_lamar_puf12_frozen_encoder/final_model/checkpoint-1440/special_tokens_map.json",
+      "status": "published"
+    },
+    {
+      "source_member": "ORCA_EditPredict/model_1024_classifier/1024_lamar_puf12_frozen_encoder/final_model/checkpoint-1440/tokenizer_config.json",
+      "uncompressed_bytes": 108,
+      "archive_crc32": "87605cae",
+      "published_path": "results/model_1024_classifier/1024_lamar_puf12_frozen_encoder/final_model/checkpoint-1440/tokenizer_config.json",
+      "status": "published"
+    },
+    {
+      "source_member": "ORCA_EditPredict/model_1024_classifier/1024_lamar_puf12_frozen_encoder/final_model/checkpoint-1440/trainer_state.json",
+      "uncompressed_bytes": 19929,
+      "archive_crc32": "43679911",
+      "published_path": "results/model_1024_classifier/1024_lamar_puf12_frozen_encoder/final_model/checkpoint-1440/trainer_state.json",
+      "status": "published"
+    },
+    {
+      "source_member": "ORCA_EditPredict/model_1024_classifier/1024_lamar_puf12_frozen_encoder/final_model/checkpoint-1440/vocab.txt",
+      "uncompressed_bytes": 40,
+      "archive_crc32": "03290414",
+      "published_path": "results/model_1024_classifier/1024_lamar_puf12_frozen_encoder/final_model/checkpoint-1440/vocab.txt",
+      "status": "published"
+    },
+    {
+      "source_member": "ORCA_EditPredict/model_1024_classifier/1024_orca_puf12/best_trial.json",
+      "uncompressed_bytes": 293,
+      "archive_crc32": "cc114a6a",
+      "published_path": "results/model_1024_classifier/1024_orca_puf12/best_trial.json",
+      "status": "published"
+    },
+    {
+      "source_member": "ORCA_EditPredict/model_1024_classifier/1024_orca_puf12/final_model/best_hyperparameters.json",
+      "uncompressed_bytes": 298,
+      "archive_crc32": "d6b88e1b",
+      "published_path": "results/model_1024_classifier/1024_orca_puf12/final_model/best_hyperparameters.json",
+      "status": "published"
+    },
+    {
+      "source_member": "ORCA_EditPredict/model_1024_classifier/1024_orca_puf12/final_model/checkpoint-240/model.safetensors",
+      "uncompressed_bytes": 345810052,
+      "archive_crc32": "c6cc7b5c",
+      "published_path": null,
+      "status": "retained in source archive; not uploaded"
+    },
+    {
+      "source_member": "ORCA_EditPredict/model_1024_classifier/1024_orca_puf12/final_model/checkpoint-240/special_tokens_map.json",
+      "uncompressed_bytes": 125,
+      "archive_crc32": "875bad3a",
+      "published_path": "results/model_1024_classifier/1024_orca_puf12/final_model/checkpoint-240/special_tokens_map.json",
+      "status": "published"
+    },
+    {
+      "source_member": "ORCA_EditPredict/model_1024_classifier/1024_orca_puf12/final_model/checkpoint-240/tokenizer_config.json",
+      "uncompressed_bytes": 108,
+      "archive_crc32": "87605cae",
+      "published_path": "results/model_1024_classifier/1024_orca_puf12/final_model/checkpoint-240/tokenizer_config.json",
+      "status": "published"
+    },
+    {
+      "source_member": "ORCA_EditPredict/model_1024_classifier/1024_orca_puf12/final_model/checkpoint-240/trainer_state.json",
+      "uncompressed_bytes": 3707,
+      "archive_crc32": "3f631f27",
+      "published_path": "results/model_1024_classifier/1024_orca_puf12/final_model/checkpoint-240/trainer_state.json",
+      "status": "published"
+    },
+    {
+      "source_member": "ORCA_EditPredict/model_1024_classifier/1024_orca_puf12/final_model/checkpoint-240/vocab.txt",
+      "uncompressed_bytes": 40,
+      "archive_crc32": "03290414",
+      "published_path": "results/model_1024_classifier/1024_orca_puf12/final_model/checkpoint-240/vocab.txt",
+      "status": "published"
+    },
+    {
+      "source_member": "ORCA_EditPredict/model_1024_classifier/1024_orca_puf12/final_model/log_history.json",
+      "uncompressed_bytes": 11292,
+      "archive_crc32": "9c4763f4",
+      "published_path": "results/model_1024_classifier/1024_orca_puf12/final_model/log_history.json",
+      "status": "published"
+    },
+    {
+      "source_member": "ORCA_EditPredict/model_1024_classifier/1024_orca_puf12/final_model/validation_metrics.json",
+      "uncompressed_bytes": 487,
+      "archive_crc32": "714480eb",
+      "published_path": "results/model_1024_classifier/1024_orca_puf12/final_model/validation_metrics.json",
+      "status": "published"
+    },
+    {
+      "source_member": "ORCA_EditPredict/model_1024_classifier/1024_orca_puf12/optuna_trials.csv",
+      "uncompressed_bytes": 6082,
+      "archive_crc32": "d37d0e57",
+      "published_path": "results/model_1024_classifier/1024_orca_puf12/optuna_trials.csv",
+      "status": "published"
+    },
+    {
+      "source_member": "ORCA_EditPredict/model_1024_classifier/1024_orca_puf12/test_evaluation/test_metrics.json",
+      "uncompressed_bytes": 356,
+      "archive_crc32": "dccf6c24",
+      "published_path": "results/model_1024_classifier/1024_orca_puf12/test_evaluation/test_metrics.json",
+      "status": "published"
+    },
+    {
+      "source_member": "ORCA_EditPredict/model_1024_classifier/1024_orca_puf12/test_evaluation/test_predictions.csv",
+      "uncompressed_bytes": 208398,
+      "archive_crc32": "95666915",
+      "published_path": "results/model_1024_classifier/1024_orca_puf12/test_evaluation/test_predictions.csv",
+      "status": "published"
+    },
+    {
+      "source_member": "ORCA_EditPredict/model_1024_classifier/1024_orca_puf12_frozen_encoder/final_model/checkpoint-1260/model.safetensors",
+      "uncompressed_bytes": 345810052,
+      "archive_crc32": "927faeb8",
+      "published_path": null,
+      "status": "retained in source archive; not uploaded"
+    },
+    {
+      "source_member": "ORCA_EditPredict/model_1024_classifier/1024_orca_puf12_frozen_encoder/final_model/checkpoint-1260/special_tokens_map.json",
+      "uncompressed_bytes": 125,
+      "archive_crc32": "875bad3a",
+      "published_path": "results/model_1024_classifier/1024_orca_puf12_frozen_encoder/final_model/checkpoint-1260/special_tokens_map.json",
+      "status": "published"
+    },
+    {
+      "source_member": "ORCA_EditPredict/model_1024_classifier/1024_orca_puf12_frozen_encoder/final_model/checkpoint-1260/tokenizer_config.json",
+      "uncompressed_bytes": 108,
+      "archive_crc32": "87605cae",
+      "published_path": "results/model_1024_classifier/1024_orca_puf12_frozen_encoder/final_model/checkpoint-1260/tokenizer_config.json",
+      "status": "published"
+    },
+    {
+      "source_member": "ORCA_EditPredict/model_1024_classifier/1024_orca_puf12_frozen_encoder/final_model/checkpoint-1260/trainer_state.json",
+      "uncompressed_bytes": 17577,
+      "archive_crc32": "14eca901",
+      "published_path": "results/model_1024_classifier/1024_orca_puf12_frozen_encoder/final_model/checkpoint-1260/trainer_state.json",
+      "status": "published"
+    },
+    {
+      "source_member": "ORCA_EditPredict/model_1024_classifier/1024_orca_puf12_frozen_encoder/final_model/checkpoint-1260/vocab.txt",
+      "uncompressed_bytes": 40,
+      "archive_crc32": "03290414",
+      "published_path": "results/model_1024_classifier/1024_orca_puf12_frozen_encoder/final_model/checkpoint-1260/vocab.txt",
+      "status": "published"
+    },
+    {
+      "source_member": "ORCA_EditPredict/model_1024_classifier/1024_orca_puf12_random/final_model/checkpoint-1080/model.safetensors",
+      "uncompressed_bytes": 345810052,
+      "archive_crc32": "31c5d8f8",
+      "published_path": null,
+      "status": "retained in source archive; not uploaded"
+    },
+    {
+      "source_member": "ORCA_EditPredict/model_1024_classifier/1024_orca_puf12_random/final_model/checkpoint-1080/special_tokens_map.json",
+      "uncompressed_bytes": 125,
+      "archive_crc32": "875bad3a",
+      "published_path": "results/model_1024_classifier/1024_orca_puf12_random/final_model/checkpoint-1080/special_tokens_map.json",
+      "status": "published"
+    },
+    {
+      "source_member": "ORCA_EditPredict/model_1024_classifier/1024_orca_puf12_random/final_model/checkpoint-1080/tokenizer_config.json",
+      "uncompressed_bytes": 108,
+      "archive_crc32": "87605cae",
+      "published_path": "results/model_1024_classifier/1024_orca_puf12_random/final_model/checkpoint-1080/tokenizer_config.json",
+      "status": "published"
+    },
+    {
+      "source_member": "ORCA_EditPredict/model_1024_classifier/1024_orca_puf12_random/final_model/checkpoint-1080/trainer_state.json",
+      "uncompressed_bytes": 14936,
+      "archive_crc32": "418c3d80",
+      "published_path": "results/model_1024_classifier/1024_orca_puf12_random/final_model/checkpoint-1080/trainer_state.json",
+      "status": "published"
+    },
+    {
+      "source_member": "ORCA_EditPredict/model_1024_classifier/1024_orca_puf12_random/final_model/checkpoint-1080/vocab.txt",
+      "uncompressed_bytes": 40,
+      "archive_crc32": "03290414",
+      "published_path": "results/model_1024_classifier/1024_orca_puf12_random/final_model/checkpoint-1080/vocab.txt",
+      "status": "published"
+    },
+    {
+      "source_member": "ORCA_EditPredict/model_1024_classifier/evaluation_1024.py",
+      "uncompressed_bytes": 8899,
+      "archive_crc32": "ff60e7be",
+      "published_path": "code/historical/model_1024_classifier/evaluation_1024.py",
+      "status": "published"
+    },
+    {
+      "source_member": "ORCA_EditPredict/model_1024_classifier/tokenize_data.py",
+      "uncompressed_bytes": 1106,
+      "archive_crc32": "a892666e",
+      "published_path": "code/historical/model_1024_classifier/tokenize_data.py",
+      "status": "published"
+    },
+    {
+      "source_member": "ORCA_EditPredict/model_1024_classifier/train.py",
+      "uncompressed_bytes": 22093,
+      "archive_crc32": "b97dcadd",
+      "published_path": "code/historical/model_1024_classifier/train.py",
+      "status": "published"
+    },
+    {
+      "source_member": "ORCA_EditPredict/model_continual_pretrain/pretrained_base/model.safetensors",
+      "uncompressed_bytes": 345840988,
+      "archive_crc32": "8ccb178f",
+      "published_path": null,
+      "status": "retained in source archive; not uploaded"
+    },
+    {
+      "source_member": "ORCA_EditPredict/model_continual_pretrain/train.py",
+      "uncompressed_bytes": 15823,
+      "archive_crc32": "b8dc831c",
+      "published_path": "code/historical/model_continual_pretrain/train.py",
+      "status": "published"
+    },
+    {
+      "source_member": "ORCA_EditPredict/model_continual_pretrain/transcriptome_pretrain/checkpoint-100000/model.safetensors",
+      "uncompressed_bytes": 345840956,
+      "archive_crc32": "2659cbde",
+      "published_path": null,
+      "status": "retained in source archive; not uploaded"
+    },
+    {
+      "source_member": "ORCA_EditPredict/model_continual_pretrain/transcriptome_pretrain/checkpoint-100000/special_tokens_map.json",
+      "uncompressed_bytes": 125,
+      "archive_crc32": "875bad3a",
+      "published_path": "results/model_continual_pretrain/transcriptome_pretrain/checkpoint-100000/special_tokens_map.json",
+      "status": "published"
+    },
+    {
+      "source_member": "ORCA_EditPredict/model_continual_pretrain/transcriptome_pretrain/checkpoint-100000/tokenizer_config.json",
+      "uncompressed_bytes": 108,
+      "archive_crc32": "87605cae",
+      "published_path": "results/model_continual_pretrain/transcriptome_pretrain/checkpoint-100000/tokenizer_config.json",
+      "status": "published"
+    },
+    {
+      "source_member": "ORCA_EditPredict/model_continual_pretrain/transcriptome_pretrain/checkpoint-100000/trainer_state.json",
+      "uncompressed_bytes": 147435,
+      "archive_crc32": "c80fd714",
+      "published_path": "results/model_continual_pretrain/transcriptome_pretrain/checkpoint-100000/trainer_state.json",
+      "status": "published"
+    },
+    {
+      "source_member": "ORCA_EditPredict/model_continual_pretrain/transcriptome_pretrain/checkpoint-100000/vocab.txt",
+      "uncompressed_bytes": 40,
+      "archive_crc32": "03290414",
+      "published_path": "results/model_continual_pretrain/transcriptome_pretrain/checkpoint-100000/vocab.txt",
+      "status": "published"
+    },
+    {
+      "source_member": "ORCA_EditPredict/README.md",
+      "uncompressed_bytes": 2250,
+      "archive_crc32": "b339a291",
+      "published_path": "provenance/source-documents/README.md",
+      "status": "published"
+    },
+    {
+      "source_member": "ORCA_EditPredict/tokenizer/special_tokens_map.json",
+      "uncompressed_bytes": 132,
+      "archive_crc32": "d8637524",
+      "published_path": "code/historical/tokenizer/special_tokens_map.json",
+      "status": "published"
+    },
+    {
+      "source_member": "ORCA_EditPredict/tokenizer/tokenizer_config.json",
+      "uncompressed_bytes": 112,
+      "archive_crc32": "eb1c8c51",
+      "published_path": "code/historical/tokenizer/tokenizer_config.json",
+      "status": "published"
+    },
+    {
+      "source_member": "ORCA_EditPredict/tokenizer/vocab.txt",
+      "uncompressed_bytes": 49,
+      "archive_crc32": "a6f11946",
+      "published_path": "code/historical/tokenizer/vocab.txt",
+      "status": "published"
+    }
+  ]
+}

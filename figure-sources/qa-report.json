@@ -1,0 +1,115 @@
+{
+  "review_date": "2026-10-11",
+  "figures": [
+    {
+      "figure": "pretraining-curves",
+      "png_pixels": [
+        1920,
+        1612
+      ],
+      "png_mode": "RGBA",
+      "png_opaque": true,
+      "svg_width": "720pt",
+      "svg_height": "604.8pt",
+      "svg_text": "paths",
+      "svg_embedded_rasters": 0,
+      "source_hash_checks": 2,
+      "pdf_info": "Tagged:          no\nPages:           1\nEncrypted:       no\nPage size:       720 x 604.8 pts\nPage rot:        0\nPDF version:     1.4",
+      "pdf_render_stderr": "",
+      "pdf_fontfile2_present": true,
+      "pdf_cidfonttype2_present": true,
+      "png_visual_review": "All five final PNGs reviewed by root agent; legible without cropped labels",
+      "pdf_visual_review": "PDF rendered to 960px with pdftoppm and manually reviewed; no clipped labels or legend overlap observed",
+      "svg_review": "Loaded successfully in local browser at natural960px width. Full browser screenshot visually inspected; no clipping or overlapping labels.",
+      "quick_look_note": "Quick Look crops SVG thumbnails to a square on this host; not used to assess SVG page boundaries."
+    },
+    {
+      "figure": "stage1-test-pr",
+      "png_pixels": [
+        1920,
+        1363
+      ],
+      "png_mode": "RGBA",
+      "png_opaque": true,
+      "svg_width": "720pt",
+      "svg_height": "511.2pt",
+      "svg_text": "paths",
+      "svg_embedded_rasters": 0,
+      "source_hash_checks": 3,
+      "pdf_info": "Tagged:          no\nPages:           1\nEncrypted:       no\nPage size:       720 x 511.2 pts\nPage rot:        0\nPDF version:     1.4",
+      "pdf_render_stderr": "",
+      "pdf_fontfile2_present": true,
+      "pdf_cidfonttype2_present": true,
+      "png_visual_review": "All five final PNGs reviewed by root agent; legible without cropped labels",
+      "pdf_visual_review": "PDF rendered to 960px with pdftoppm and manually reviewed; no clipped labels or legend overlap observed",
+      "svg_review": "Loaded successfully in local browser at natural960px width. Full browser screenshot visually inspected; no clipping or overlapping labels.",
+      "quick_look_note": "Quick Look crops SVG thumbnails to a square on this host; not used to assess SVG page boundaries."
+    },
+    {
+      "figure": "stage1-training-loss",
+      "png_pixels": [
+        1920,
+        1440
+      ],
+      "png_mode": "RGBA",
+      "png_opaque": true,
+      "svg_width": "720pt",
+      "svg_height": "540pt",
+      "svg_text": "paths",
+      "svg_embedded_rasters": 0,
+      "source_hash_checks": 6,
+      "pdf_info": "Tagged:          no\nPages:           1\nEncrypted:       no\nPage size:       720 x 540 pts\nPage rot:        0\nPDF version:     1.4",
+      "pdf_render_stderr": "",
+      "pdf_fontfile2_present": true,
+      "pdf_cidfonttype2_present": true,
+      "png_visual_review": "All five final PNGs reviewed by root agent; legible without cropped labels",
+      "pdf_visual_review": "PDF rendered to 960px with pdftoppm and manually reviewed; no clipped labels or legend overlap observed",
+      "svg_review": "Loaded successfully in local browser at natural960px width. Raster counterpart and PDF fully reviewed; SVG loaded but not separately screenshot-reviewed.",
+      "quick_look_note": "Quick Look crops SVG thumbnails to a square on this host; not used to assess SVG page boundaries."
+    },
+    {
+      "figure": "stage1-validation-ap",
+      "png_pixels": [
+        1920,
+        1440
+      ],
+      "png_mode": "RGBA",
+      "png_opaque": true,
+      "svg_width": "720pt",
+      "svg_height": "540pt",
+      "svg_text": "paths",
+      "svg_embedded_rasters": 0,
+      "source_hash_checks": 6,
+      "pdf_info": "Tagged:          no\nPages:           1\nEncrypted:       no\nPage size:       720 x 540 pts\nPage rot:        0\nPDF version:     1.4",
+      "pdf_render_stderr": "",
+      "pdf_fontfile2_present": true,
+      "pdf_cidfonttype2_present": true,
+      "png_visual_review": "All five final PNGs reviewed by root agent; legible without cropped labels",
+      "pdf_visual_review": "PDF rendered to 960px with pdftoppm and manually reviewed; no clipped labels or legend overlap observed",
+      "svg_review": "Loaded successfully in local browser at natural960px width. Full browser screenshot visually inspected; no clipping or overlapping labels.",
+      "quick_look_note": "Quick Look crops SVG thumbnails to a square on this host; not used to assess SVG page boundaries."
+    },
+    {
+      "figure": "stage2-ranking-reported",
+      "png_pixels": [
+        1920,
+        1286
+      ],
+      "png_mode": "RGBA",
+      "png_opaque": true,
+      "svg_width": "720pt",
+      "svg_height": "482.4pt",
+      "svg_text": "paths",
+      "svg_embedded_rasters": 0,
+      "source_hash_checks": 2,
+      "pdf_info": "Tagged:          no\nPages:           1\nEncrypted:       no\nPage size:       720 x 482.4 pts\nPage rot:        0\nPDF version:     1.4",
+      "pdf_render_stderr": "",
+      "pdf_fontfile2_present": true,
+      "pdf_cidfonttype2_present": true,
+      "png_visual_review": "All five final PNGs reviewed by root agent; legible without cropped labels",
+      "pdf_visual_review": "PDF rendered to 960px with pdftoppm and manually reviewed; no clipped labels or legend overlap observed",
+      "svg_review": "Loaded successfully in local browser at natural960px width. Full browser screenshot visually inspected; no clipping or overlapping labels.",
+      "quick_look_note": "Quick Look crops SVG thumbnails to a square on this host; not used to assess SVG page boundaries."
+    }
+  ]
+}

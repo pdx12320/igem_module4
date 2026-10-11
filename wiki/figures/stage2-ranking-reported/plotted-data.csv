@@ -1,0 +1,8 @@
+metric,k,reported_score,evidence_status,evaluated_positive_regions
+Hit,1,0.243,draft_reported_not_recomputed,140
+Hit,5,0.607,draft_reported_not_recomputed,140
+Hit,10,0.779,draft_reported_not_recomputed,140
+Hit,20,0.921,draft_reported_not_recomputed,140
+Recall,5,0.373,draft_reported_not_recomputed,140
+Recall,10,0.573,draft_reported_not_recomputed,140
+Recall,20,0.792,draft_reported_not_recomputed,140

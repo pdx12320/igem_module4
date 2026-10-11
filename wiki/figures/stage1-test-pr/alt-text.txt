@@ -1,0 +1,1 @@
+An empirical precision–recall staircase for 212 saved Stage I test predictions, with AP 0.722. A dashed reference line shows the positive-label prevalence of 0.660. The supplied split has exact sequence overlap with training and is not established as independent.

@@ -1,0 +1,65 @@
+{
+  "template_version": "orca-data-1.1",
+  "font": "Futura",
+  "cjk_font": "Arial Unicode MS",
+  "notes": [],
+  "runtime": {
+    "python": "3.12.14",
+    "matplotlib": "3.10.8",
+    "numpy": "2.5.3"
+  },
+  "export": {
+    "width_in": 10.0,
+    "height_in": 7.1,
+    "dpi": 192.0,
+    "display_width_px": 960,
+    "svg_text": "paths",
+    "pdf_fonttype": 42
+  },
+  "provenance": {
+    "audience": "iGEM wiki, 960 CSS px display width",
+    "uncertainty": "No error intervals or significance tests; no independent replicate estimates supplied",
+    "exclusions": "No observations removed for outlier status or aesthetics",
+    "smoothing": "None",
+    "random_seed": null,
+    "plot_script": {
+      "path": "figure-sources/plot.py",
+      "sha256": "462b7424ba7d1a3facbb3a80f00358d4501ac37d1b283b276fb7e366d7797469",
+      "read_range": "complete script"
+    },
+    "sources": [
+      {
+        "path": "results/model_1024_classifier/1024_orca_puf12/test_evaluation/test_predictions.csv",
+        "sha256": "c73ace6be5ab2a87169f2544da07658b1c5575618407711286b1bc58975dadf1",
+        "read_range": "all rows: label and prob_class_1"
+      },
+      {
+        "path": "results/model_1024_classifier/1024_orca_puf12/test_evaluation/test_metrics.json",
+        "sha256": "b4ad2be07cf7ff34bfc5bbdf6cf184a964b97d247b076b6416505199fe8b6c5c",
+        "read_range": "pr_auc and sample counts"
+      }
+    ],
+    "chart_type": "empirical precision–recall staircase",
+    "analysis_unit": "region prediction",
+    "n": {
+      "regions": 212,
+      "positive": 140,
+      "negative": 72
+    },
+    "transforms": [
+      "stable decreasing-score sort",
+      "aggregate tied score thresholds",
+      "precision=TP/(TP+FP)",
+      "recall=TP/140"
+    ],
+    "ap_definition": "sum of precision * increase in recall at distinct descending score thresholds",
+    "ap": 0.7222672656649609,
+    "saved_ap": 0.7222672656649609,
+    "ap_absolute_tolerance": 1e-12,
+    "missing": "None in the label and positive-score columns",
+    "axis_ranges": [
+      0,
+      1
+    ]
+  }
+}

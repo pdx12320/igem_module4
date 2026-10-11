@@ -1,0 +1,14 @@
+{
+  "epoch": 2,
+  "global_step": 958,
+  "best_metric": 0.8466666666666667,
+  "save_best_metric": "hit10",
+  "learning_rate": 5e-06,
+  "weight_decay": 0.01,
+  "gradient_accumulation": 8,
+  "num_epochs": 8,
+  "seed": 42,
+  "window_length": 101,
+  "model_max_length": 103,
+  "center_token_index": 51,
+}

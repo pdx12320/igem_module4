@@ -1,0 +1,398 @@
+{
+  "archive_name": "ORCA_EditPredict.zip",
+  "note": "Original files remain unchanged. Only host-specific metadata paths are redacted in publication copies. No scientific values are changed.",
+  "entries": [
+    {
+      "source_member": "ORCA_EditPredict/01_WIKI.md",
+      "published_path": "provenance/source-documents/01_WIKI.md",
+      "source_sha256": "3e92bc7ea72e30b4efda0bcf2b6496433a7525d22df77fcff74d79d374d7c4c4",
+      "published_sha256": "3e92bc7ea72e30b4efda0bcf2b6496433a7525d22df77fcff74d79d374d7c4c4",
+      "transformation": "byte-identical copy"
+    },
+    {
+      "source_member": "ORCA_EditPredict/02_DBTL.md",
+      "published_path": "provenance/source-documents/02_DBTL.md",
+      "source_sha256": "b953931d46312bf9c83601daa47397146e4592ba2c749ea5ca363c028110382f",
+      "published_sha256": "b953931d46312bf9c83601daa47397146e4592ba2c749ea5ca363c028110382f",
+      "transformation": "byte-identical copy"
+    },
+    {
+      "source_member": "ORCA_EditPredict/README.md",
+      "published_path": "provenance/source-documents/README.md",
+      "source_sha256": "fa8dc191029bd3a289a6c9930d095cb45ce96673af20811ab0240188d20de7e5",
+      "published_sha256": "fa8dc191029bd3a289a6c9930d095cb45ce96673af20811ab0240188d20de7e5",
+      "transformation": "byte-identical copy"
+    },
+    {
+      "source_member": "ORCA_EditPredict/config_150M.json",
+      "published_path": "code/historical/config_150M.json",
+      "source_sha256": "e512f68ec444d99477703a9806639ca83da3dbc19f6c5fe428d6e5b7460972dc",
+      "published_sha256": "01b8b98e37f7d4bbeaa285f8e3410eaa9396d9d5914271dfdfd5f4956f210d07",
+      "transformation": "_name_or_path: host-specific absolute path replaced with basename"
+    },
+    {
+      "source_member": "ORCA_EditPredict/data/101nt_dataset/orca_puf12_test.json",
+      "published_path": "data/101nt_dataset/orca_puf12_test.json",
+      "source_sha256": "ac7c9127bbe595bd6e7c21ea4f5799bb65fc896158e3f3966bce22ddb8780626",
+      "published_sha256": "ac7c9127bbe595bd6e7c21ea4f5799bb65fc896158e3f3966bce22ddb8780626",
+      "transformation": "byte-identical copy"
+    },
+    {
+      "source_member": "ORCA_EditPredict/data/101nt_dataset/orca_puf12_train.json",
+      "published_path": "data/101nt_dataset/orca_puf12_train.json",
+      "source_sha256": "e1d07e08c492d399bb3c933c453f7b96c1c366e66f2f3ffb7ece12f66b17c354",
+      "published_sha256": "e1d07e08c492d399bb3c933c453f7b96c1c366e66f2f3ffb7ece12f66b17c354",
+      "transformation": "byte-identical copy"
+    },
+    {
+      "source_member": "ORCA_EditPredict/data/101nt_dataset/orca_puf12_valid.json",
+      "published_path": "data/101nt_dataset/orca_puf12_valid.json",
+      "source_sha256": "28301ecc39deca3652e097f91477a66cf620bc88ec3da3fe9785c5a3ef2b7540",
+      "published_sha256": "28301ecc39deca3652e097f91477a66cf620bc88ec3da3fe9785c5a3ef2b7540",
+      "transformation": "byte-identical copy"
+    },
+    {
+      "source_member": "ORCA_EditPredict/data/1024nt_dataset/orca_puf12_test.csv",
+      "published_path": "data/1024nt_dataset/orca_puf12_test.csv",
+      "source_sha256": "e02d9978d43da3593f8210451c0c69683f9be476ce0edfd21021eb849fc8c185",
+      "published_sha256": "e02d9978d43da3593f8210451c0c69683f9be476ce0edfd21021eb849fc8c185",
+      "transformation": "byte-identical copy"
+    },
+    {
+      "source_member": "ORCA_EditPredict/data/1024nt_dataset/orca_puf12_train.csv",
+      "published_path": "data/1024nt_dataset/orca_puf12_train.csv",
+      "source_sha256": "e6fc954fd0fe28e8ecf3b527685e780a33f10f4deda977e705c41a821ca69216",
+      "published_sha256": "e6fc954fd0fe28e8ecf3b527685e780a33f10f4deda977e705c41a821ca69216",
+      "transformation": "byte-identical copy"
+    },
+    {
+      "source_member": "ORCA_EditPredict/data/1024nt_dataset/orca_puf12_valid.csv",
+      "published_path": "data/1024nt_dataset/orca_puf12_valid.csv",
+      "source_sha256": "3499f67e9ea7366a1876824ba9e8a27dee2e5e454ef50e6ef3972065b80384f6",
+      "published_sha256": "3499f67e9ea7366a1876824ba9e8a27dee2e5e454ef50e6ef3972065b80384f6",
+      "transformation": "byte-identical copy"
+    },
+    {
+      "source_member": "ORCA_EditPredict/data/PUF12_positive_with_strand.tsv",
+      "published_path": "data/PUF12_positive_with_strand.tsv",
+      "source_sha256": "75a10da6be90bc008c136a78c71b0881bd16a5066537fdaf292e2ecd67fdc16c",
+      "published_sha256": "75a10da6be90bc008c136a78c71b0881bd16a5066537fdaf292e2ecd67fdc16c",
+      "transformation": "byte-identical copy"
+    },
+    {
+      "source_member": "ORCA_EditPredict/model_101_classifier/best_model/config.json",
+      "published_path": "results/model_101_classifier/best_model/config.json",
+      "source_sha256": "65f0e95dec9e3cb055b423f458ed13d0edad188ad4f2212b4516110e69c6b6df",
+      "published_sha256": "fffd767b8f39018dde1c98dd1d8f161cea891b03238beca3b0664c3ef7e737d8",
+      "transformation": "_name_or_path: host-specific absolute path replaced with basename"
+    },
+    {
+      "source_member": "ORCA_EditPredict/model_101_classifier/best_model/special_tokens_map.json",
+      "published_path": "results/model_101_classifier/best_model/special_tokens_map.json",
+      "source_sha256": "3aedcd4211c0d43aec4e607ff60a63255f3174ead795e997350f09a5f8cd9ee1",
+      "published_sha256": "3aedcd4211c0d43aec4e607ff60a63255f3174ead795e997350f09a5f8cd9ee1",
+      "transformation": "byte-identical copy"
+    },
+    {
+      "source_member": "ORCA_EditPredict/model_101_classifier/best_model/tokenizer_config.json",
+      "published_path": "results/model_101_classifier/best_model/tokenizer_config.json",
+      "source_sha256": "dc60d5c3952a0864ae24c83c4549220a2e62ddd8cf7ed837f48d9e7c63e26992",
+      "published_sha256": "dc60d5c3952a0864ae24c83c4549220a2e62ddd8cf7ed837f48d9e7c63e26992",
+      "transformation": "byte-identical copy"
+    },
+    {
+      "source_member": "ORCA_EditPredict/model_101_classifier/best_model/training_state.json",
+      "published_path": "results/model_101_classifier/best_model/training_state.json.txt",
+      "source_sha256": "266a096a788155b6070e81bda27fb9bb1f444edbf2f4692e0d0692ee925ba553",
+      "published_sha256": "266a096a788155b6070e81bda27fb9bb1f444edbf2f4692e0d0692ee925ba553",
+      "transformation": "byte-identical copy"
+    },
+    {
+      "source_member": "ORCA_EditPredict/model_101_classifier/best_model/vocab.txt",
+      "published_path": "results/model_101_classifier/best_model/vocab.txt",
+      "source_sha256": "369d7ca62e051f1042f9846ba1d90ad684f1115d0a5f6d8d61f8c6ee71b16d58",
+      "published_sha256": "369d7ca62e051f1042f9846ba1d90ad684f1115d0a5f6d8d61f8c6ee71b16d58",
+      "transformation": "byte-identical copy"
+    },
+    {
+      "source_member": "ORCA_EditPredict/model_101_classifier/evaluation_top_ranking.py",
+      "published_path": "code/historical/model_101_classifier/evaluation_top_ranking.py",
+      "source_sha256": "d7a176e102099401d1d1b281c30fd4e59362f8d439c9201889a90a218dbd77e4",
+      "published_sha256": "d7a176e102099401d1d1b281c30fd4e59362f8d439c9201889a90a218dbd77e4",
+      "transformation": "byte-identical copy"
+    },
+    {
+      "source_member": "ORCA_EditPredict/model_101_classifier/train_orca_ranking_101.py",
+      "published_path": "code/historical/model_101_classifier/train_orca_ranking_101.py",
+      "source_sha256": "48f447f7f02527033fd04320648a885754ac953417f29501d824231b1996e12f",
+      "published_sha256": "48f447f7f02527033fd04320648a885754ac953417f29501d824231b1996e12f",
+      "transformation": "byte-identical copy"
+    },
+    {
+      "source_member": "ORCA_EditPredict/model_1024_classifier/1024_lamar_puf12/final_model/checkpoint-1380/special_tokens_map.json",
+      "published_path": "results/model_1024_classifier/1024_lamar_puf12/final_model/checkpoint-1380/special_tokens_map.json",
+      "source_sha256": "3aedcd4211c0d43aec4e607ff60a63255f3174ead795e997350f09a5f8cd9ee1",
+      "published_sha256": "3aedcd4211c0d43aec4e607ff60a63255f3174ead795e997350f09a5f8cd9ee1",
+      "transformation": "byte-identical copy"
+    },
+    {
+      "source_member": "ORCA_EditPredict/model_1024_classifier/1024_lamar_puf12/final_model/checkpoint-1380/tokenizer_config.json",
+      "published_path": "results/model_1024_classifier/1024_lamar_puf12/final_model/checkpoint-1380/tokenizer_config.json",
+      "source_sha256": "db5c6b3bd2346d21d2b074dd020ff358d06fe11cad2c9a34636f54a7d644dc74",
+      "published_sha256": "db5c6b3bd2346d21d2b074dd020ff358d06fe11cad2c9a34636f54a7d644dc74",
+      "transformation": "byte-identical copy"
+    },
+    {
+      "source_member": "ORCA_EditPredict/model_1024_classifier/1024_lamar_puf12/final_model/checkpoint-1380/trainer_state.json",
+      "published_path": "results/model_1024_classifier/1024_lamar_puf12/final_model/checkpoint-1380/trainer_state.json",
+      "source_sha256": "24355b81921944ef95e7973b5af19117bb4e737335cbd8803aaf3aaeea5d6a01",
+      "published_sha256": "efc94f08cb17a4c8ba7c81c28b79a1ae376e7d64ef5df193dc9771cd8aa09915",
+      "transformation": "best_model_checkpoint: host-specific absolute path replaced with basename"
+    },
+    {
+      "source_member": "ORCA_EditPredict/model_1024_classifier/1024_lamar_puf12/final_model/checkpoint-1380/vocab.txt",
+      "published_path": "results/model_1024_classifier/1024_lamar_puf12/final_model/checkpoint-1380/vocab.txt",
+      "source_sha256": "369d7ca62e051f1042f9846ba1d90ad684f1115d0a5f6d8d61f8c6ee71b16d58",
+      "published_sha256": "369d7ca62e051f1042f9846ba1d90ad684f1115d0a5f6d8d61f8c6ee71b16d58",
+      "transformation": "byte-identical copy"
+    },
+    {
+      "source_member": "ORCA_EditPredict/model_1024_classifier/1024_lamar_puf12_frozen_encoder/final_model/checkpoint-1440/special_tokens_map.json",
+      "published_path": "results/model_1024_classifier/1024_lamar_puf12_frozen_encoder/final_model/checkpoint-1440/special_tokens_map.json",
+      "source_sha256": "3aedcd4211c0d43aec4e607ff60a63255f3174ead795e997350f09a5f8cd9ee1",
+      "published_sha256": "3aedcd4211c0d43aec4e607ff60a63255f3174ead795e997350f09a5f8cd9ee1",
+      "transformation": "byte-identical copy"
+    },
+    {
+      "source_member": "ORCA_EditPredict/model_1024_classifier/1024_lamar_puf12_frozen_encoder/final_model/checkpoint-1440/tokenizer_config.json",
+      "published_path": "results/model_1024_classifier/1024_lamar_puf12_frozen_encoder/final_model/checkpoint-1440/tokenizer_config.json",
+      "source_sha256": "db5c6b3bd2346d21d2b074dd020ff358d06fe11cad2c9a34636f54a7d644dc74",
+      "published_sha256": "db5c6b3bd2346d21d2b074dd020ff358d06fe11cad2c9a34636f54a7d644dc74",
+      "transformation": "byte-identical copy"
+    },
+    {
+      "source_member": "ORCA_EditPredict/model_1024_classifier/1024_lamar_puf12_frozen_encoder/final_model/checkpoint-1440/trainer_state.json",
+      "published_path": "results/model_1024_classifier/1024_lamar_puf12_frozen_encoder/final_model/checkpoint-1440/trainer_state.json",
+      "source_sha256": "052a54c0bf92f291c5613b5bba91f403613274feb9fbbfa19bdc1a20e2e77f25",
+      "published_sha256": "9e47748ce93dc99b2c8cf072fc930d7552ecf1ba5e5e92e07527d4274af13a90",
+      "transformation": "best_model_checkpoint: host-specific absolute path replaced with basename"
+    },
+    {
+      "source_member": "ORCA_EditPredict/model_1024_classifier/1024_lamar_puf12_frozen_encoder/final_model/checkpoint-1440/vocab.txt",
+      "published_path": "results/model_1024_classifier/1024_lamar_puf12_frozen_encoder/final_model/checkpoint-1440/vocab.txt",
+      "source_sha256": "369d7ca62e051f1042f9846ba1d90ad684f1115d0a5f6d8d61f8c6ee71b16d58",
+      "published_sha256": "369d7ca62e051f1042f9846ba1d90ad684f1115d0a5f6d8d61f8c6ee71b16d58",
+      "transformation": "byte-identical copy"
+    },
+    {
+      "source_member": "ORCA_EditPredict/model_1024_classifier/1024_orca_puf12/best_trial.json",
+      "published_path": "results/model_1024_classifier/1024_orca_puf12/best_trial.json",
+      "source_sha256": "0858d8009cb3c9aef18206311bbef339bbfba98654902b1af4e2cc52d7fd4ae8",
+      "published_sha256": "0858d8009cb3c9aef18206311bbef339bbfba98654902b1af4e2cc52d7fd4ae8",
+      "transformation": "byte-identical copy"
+    },
+    {
+      "source_member": "ORCA_EditPredict/model_1024_classifier/1024_orca_puf12/final_model/best_hyperparameters.json",
+      "published_path": "results/model_1024_classifier/1024_orca_puf12/final_model/best_hyperparameters.json",
+      "source_sha256": "98e2755f37bea8a84b98dbe6c8f5f0824fd6738fc00da34297455ef2775f2eb8",
+      "published_sha256": "98e2755f37bea8a84b98dbe6c8f5f0824fd6738fc00da34297455ef2775f2eb8",
+      "transformation": "byte-identical copy"
+    },
+    {
+      "source_member": "ORCA_EditPredict/model_1024_classifier/1024_orca_puf12/final_model/checkpoint-240/special_tokens_map.json",
+      "published_path": "results/model_1024_classifier/1024_orca_puf12/final_model/checkpoint-240/special_tokens_map.json",
+      "source_sha256": "3aedcd4211c0d43aec4e607ff60a63255f3174ead795e997350f09a5f8cd9ee1",
+      "published_sha256": "3aedcd4211c0d43aec4e607ff60a63255f3174ead795e997350f09a5f8cd9ee1",
+      "transformation": "byte-identical copy"
+    },
+    {
+      "source_member": "ORCA_EditPredict/model_1024_classifier/1024_orca_puf12/final_model/checkpoint-240/tokenizer_config.json",
+      "published_path": "results/model_1024_classifier/1024_orca_puf12/final_model/checkpoint-240/tokenizer_config.json",
+      "source_sha256": "db5c6b3bd2346d21d2b074dd020ff358d06fe11cad2c9a34636f54a7d644dc74",
+      "published_sha256": "db5c6b3bd2346d21d2b074dd020ff358d06fe11cad2c9a34636f54a7d644dc74",
+      "transformation": "byte-identical copy"
+    },
+    {
+      "source_member": "ORCA_EditPredict/model_1024_classifier/1024_orca_puf12/final_model/checkpoint-240/trainer_state.json",
+      "published_path": "results/model_1024_classifier/1024_orca_puf12/final_model/checkpoint-240/trainer_state.json",
+      "source_sha256": "567ee29aab52b1f0ffb116212a512b5e5712da5800b79c321a135b55ae0ad501",
+      "published_sha256": "1a50ee128bd393fb83de5b9cb9c8bf73277864686ec525916f0caeb4760db8de",
+      "transformation": "best_model_checkpoint: host-specific absolute path replaced with basename"
+    },
+    {
+      "source_member": "ORCA_EditPredict/model_1024_classifier/1024_orca_puf12/final_model/checkpoint-240/vocab.txt",
+      "published_path": "results/model_1024_classifier/1024_orca_puf12/final_model/checkpoint-240/vocab.txt",
+      "source_sha256": "369d7ca62e051f1042f9846ba1d90ad684f1115d0a5f6d8d61f8c6ee71b16d58",
+      "published_sha256": "369d7ca62e051f1042f9846ba1d90ad684f1115d0a5f6d8d61f8c6ee71b16d58",
+      "transformation": "byte-identical copy"
+    },
+    {
+      "source_member": "ORCA_EditPredict/model_1024_classifier/1024_orca_puf12/final_model/log_history.json",
+      "published_path": "results/model_1024_classifier/1024_orca_puf12/final_model/log_history.json",
+      "source_sha256": "6ab7875c7861b1109e10b9b86906c0c52ccea076e6c3eadab6528730ebd1ee56",
+      "published_sha256": "6ab7875c7861b1109e10b9b86906c0c52ccea076e6c3eadab6528730ebd1ee56",
+      "transformation": "byte-identical copy"
+    },
+    {
+      "source_member": "ORCA_EditPredict/model_1024_classifier/1024_orca_puf12/final_model/validation_metrics.json",
+      "published_path": "results/model_1024_classifier/1024_orca_puf12/final_model/validation_metrics.json",
+      "source_sha256": "7f17f72b8437760fd41452410719bb408bcb09d778abd3abadc6a164c1f38dad",
+      "published_sha256": "7f17f72b8437760fd41452410719bb408bcb09d778abd3abadc6a164c1f38dad",
+      "transformation": "byte-identical copy"
+    },
+    {
+      "source_member": "ORCA_EditPredict/model_1024_classifier/1024_orca_puf12/optuna_trials.csv",
+      "published_path": "results/model_1024_classifier/1024_orca_puf12/optuna_trials.csv",
+      "source_sha256": "59f0ef71fbe4fc72992694041f26e68bc9886b982816bd48e46a6914d3a8801d",
+      "published_sha256": "59f0ef71fbe4fc72992694041f26e68bc9886b982816bd48e46a6914d3a8801d",
+      "transformation": "byte-identical copy"
+    },
+    {
+      "source_member": "ORCA_EditPredict/model_1024_classifier/1024_orca_puf12/test_evaluation/test_metrics.json",
+      "published_path": "results/model_1024_classifier/1024_orca_puf12/test_evaluation/test_metrics.json",
+      "source_sha256": "b4ad2be07cf7ff34bfc5bbdf6cf184a964b97d247b076b6416505199fe8b6c5c",
+      "published_sha256": "b4ad2be07cf7ff34bfc5bbdf6cf184a964b97d247b076b6416505199fe8b6c5c",
+      "transformation": "byte-identical copy"
+    },
+    {
+      "source_member": "ORCA_EditPredict/model_1024_classifier/1024_orca_puf12/test_evaluation/test_predictions.csv",
+      "published_path": "results/model_1024_classifier/1024_orca_puf12/test_evaluation/test_predictions.csv",
+      "source_sha256": "c73ace6be5ab2a87169f2544da07658b1c5575618407711286b1bc58975dadf1",
+      "published_sha256": "c73ace6be5ab2a87169f2544da07658b1c5575618407711286b1bc58975dadf1",
+      "transformation": "byte-identical copy"
+    },
+    {
+      "source_member": "ORCA_EditPredict/model_1024_classifier/1024_orca_puf12_frozen_encoder/final_model/checkpoint-1260/special_tokens_map.json",
+      "published_path": "results/model_1024_classifier/1024_orca_puf12_frozen_encoder/final_model/checkpoint-1260/special_tokens_map.json",
+      "source_sha256": "3aedcd4211c0d43aec4e607ff60a63255f3174ead795e997350f09a5f8cd9ee1",
+      "published_sha256": "3aedcd4211c0d43aec4e607ff60a63255f3174ead795e997350f09a5f8cd9ee1",
+      "transformation": "byte-identical copy"
+    },
+    {
+      "source_member": "ORCA_EditPredict/model_1024_classifier/1024_orca_puf12_frozen_encoder/final_model/checkpoint-1260/tokenizer_config.json",
+      "published_path": "results/model_1024_classifier/1024_orca_puf12_frozen_encoder/final_model/checkpoint-1260/tokenizer_config.json",
+      "source_sha256": "db5c6b3bd2346d21d2b074dd020ff358d06fe11cad2c9a34636f54a7d644dc74",
+      "published_sha256": "db5c6b3bd2346d21d2b074dd020ff358d06fe11cad2c9a34636f54a7d644dc74",
+      "transformation": "byte-identical copy"
+    },
+    {
+      "source_member": "ORCA_EditPredict/model_1024_classifier/1024_orca_puf12_frozen_encoder/final_model/checkpoint-1260/trainer_state.json",
+      "published_path": "results/model_1024_classifier/1024_orca_puf12_frozen_encoder/final_model/checkpoint-1260/trainer_state.json",
+      "source_sha256": "c55bb90635cb730b496b34e6764f0085c0ccbb8b3a44bc48581fb119738bcb7e",
+      "published_sha256": "ec85fce689e10bb0e9042e3dd32e4356675e2c9367e58c57667b57bc7029b5c8",
+      "transformation": "best_model_checkpoint: host-specific absolute path replaced with basename"
+    },
+    {
+      "source_member": "ORCA_EditPredict/model_1024_classifier/1024_orca_puf12_frozen_encoder/final_model/checkpoint-1260/vocab.txt",
+      "published_path": "results/model_1024_classifier/1024_orca_puf12_frozen_encoder/final_model/checkpoint-1260/vocab.txt",
+      "source_sha256": "369d7ca62e051f1042f9846ba1d90ad684f1115d0a5f6d8d61f8c6ee71b16d58",
+      "published_sha256": "369d7ca62e051f1042f9846ba1d90ad684f1115d0a5f6d8d61f8c6ee71b16d58",
+      "transformation": "byte-identical copy"
+    },
+    {
+      "source_member": "ORCA_EditPredict/model_1024_classifier/1024_orca_puf12_random/final_model/checkpoint-1080/special_tokens_map.json",
+      "published_path": "results/model_1024_classifier/1024_orca_puf12_random/final_model/checkpoint-1080/special_tokens_map.json",
+      "source_sha256": "3aedcd4211c0d43aec4e607ff60a63255f3174ead795e997350f09a5f8cd9ee1",
+      "published_sha256": "3aedcd4211c0d43aec4e607ff60a63255f3174ead795e997350f09a5f8cd9ee1",
+      "transformation": "byte-identical copy"
+    },
+    {
+      "source_member": "ORCA_EditPredict/model_1024_classifier/1024_orca_puf12_random/final_model/checkpoint-1080/tokenizer_config.json",
+      "published_path": "results/model_1024_classifier/1024_orca_puf12_random/final_model/checkpoint-1080/tokenizer_config.json",
+      "source_sha256": "db5c6b3bd2346d21d2b074dd020ff358d06fe11cad2c9a34636f54a7d644dc74",
+      "published_sha256": "db5c6b3bd2346d21d2b074dd020ff358d06fe11cad2c9a34636f54a7d644dc74",
+      "transformation": "byte-identical copy"
+    },
+    {
+      "source_member": "ORCA_EditPredict/model_1024_classifier/1024_orca_puf12_random/final_model/checkpoint-1080/trainer_state.json",
+      "published_path": "results/model_1024_classifier/1024_orca_puf12_random/final_model/checkpoint-1080/trainer_state.json",
+      "source_sha256": "1595c43221fcb388fe34308e4adaff74db77f3af55d7dfa3e081e07540477a8b",
+      "published_sha256": "ad3034c0008706ed89fe07051c0da681541836198b1197ebd8008cf3fdb49700",
+      "transformation": "best_model_checkpoint: host-specific absolute path replaced with basename"
+    },
+    {
+      "source_member": "ORCA_EditPredict/model_1024_classifier/1024_orca_puf12_random/final_model/checkpoint-1080/vocab.txt",
+      "published_path": "results/model_1024_classifier/1024_orca_puf12_random/final_model/checkpoint-1080/vocab.txt",
+      "source_sha256": "369d7ca62e051f1042f9846ba1d90ad684f1115d0a5f6d8d61f8c6ee71b16d58",
+      "published_sha256": "369d7ca62e051f1042f9846ba1d90ad684f1115d0a5f6d8d61f8c6ee71b16d58",
+      "transformation": "byte-identical copy"
+    },
+    {
+      "source_member": "ORCA_EditPredict/model_1024_classifier/evaluation_1024.py",
+      "published_path": "code/historical/model_1024_classifier/evaluation_1024.py",
+      "source_sha256": "ba20b284520e6c658a6b625285b6b2ea4a2821f73a03787674250bc1b40eec3d",
+      "published_sha256": "ba20b284520e6c658a6b625285b6b2ea4a2821f73a03787674250bc1b40eec3d",
+      "transformation": "byte-identical copy"
+    },
+    {
+      "source_member": "ORCA_EditPredict/model_1024_classifier/tokenize_data.py",
+      "published_path": "code/historical/model_1024_classifier/tokenize_data.py",
+      "source_sha256": "be5f9b81929aa66e741424c1c664735f1ed61ff02a72a80e823051ff057487e2",
+      "published_sha256": "be5f9b81929aa66e741424c1c664735f1ed61ff02a72a80e823051ff057487e2",
+      "transformation": "byte-identical copy"
+    },
+    {
+      "source_member": "ORCA_EditPredict/model_1024_classifier/train.py",
+      "published_path": "code/historical/model_1024_classifier/train.py",
+      "source_sha256": "5bba8d502e05c368cde73a461124b9e94caca938e40e82b5ed93e2bced6d8839",
+      "published_sha256": "5bba8d502e05c368cde73a461124b9e94caca938e40e82b5ed93e2bced6d8839",
+      "transformation": "byte-identical copy"
+    },
+    {
+      "source_member": "ORCA_EditPredict/model_continual_pretrain/train.py",
+      "published_path": "code/historical/model_continual_pretrain/train.py",
+      "source_sha256": "77f02f021de129c7956247e2e53404e733e41dbb564f97c37ea83916db5cd147",
+      "published_sha256": "77f02f021de129c7956247e2e53404e733e41dbb564f97c37ea83916db5cd147",
+      "transformation": "byte-identical copy"
+    },
+    {
+      "source_member": "ORCA_EditPredict/model_continual_pretrain/transcriptome_pretrain/checkpoint-100000/special_tokens_map.json",
+      "published_path": "results/model_continual_pretrain/transcriptome_pretrain/checkpoint-100000/special_tokens_map.json",
+      "source_sha256": "3aedcd4211c0d43aec4e607ff60a63255f3174ead795e997350f09a5f8cd9ee1",
+      "published_sha256": "3aedcd4211c0d43aec4e607ff60a63255f3174ead795e997350f09a5f8cd9ee1",
+      "transformation": "byte-identical copy"
+    },
+    {
+      "source_member": "ORCA_EditPredict/model_continual_pretrain/transcriptome_pretrain/checkpoint-100000/tokenizer_config.json",
+      "published_path": "results/model_continual_pretrain/transcriptome_pretrain/checkpoint-100000/tokenizer_config.json",
+      "source_sha256": "db5c6b3bd2346d21d2b074dd020ff358d06fe11cad2c9a34636f54a7d644dc74",
+      "published_sha256": "db5c6b3bd2346d21d2b074dd020ff358d06fe11cad2c9a34636f54a7d644dc74",
+      "transformation": "byte-identical copy"
+    },
+    {
+      "source_member": "ORCA_EditPredict/model_continual_pretrain/transcriptome_pretrain/checkpoint-100000/trainer_state.json",
+      "published_path": "results/model_continual_pretrain/transcriptome_pretrain/checkpoint-100000/trainer_state.json",
+      "source_sha256": "edb669743e418bb819decb33af9cd374ceaa2cb3b0b0a92468e591b60a8c8fea",
+      "published_sha256": "ead52c1e2b186b844a4392cf4e9f854ae09a39090c1887f87869103eece3ff05",
+      "transformation": "best_model_checkpoint: host-specific absolute path replaced with basename"
+    },
+    {
+      "source_member": "ORCA_EditPredict/model_continual_pretrain/transcriptome_pretrain/checkpoint-100000/vocab.txt",
+      "published_path": "results/model_continual_pretrain/transcriptome_pretrain/checkpoint-100000/vocab.txt",
+      "source_sha256": "369d7ca62e051f1042f9846ba1d90ad684f1115d0a5f6d8d61f8c6ee71b16d58",
+      "published_sha256": "369d7ca62e051f1042f9846ba1d90ad684f1115d0a5f6d8d61f8c6ee71b16d58",
+      "transformation": "byte-identical copy"
+    },
+    {
+      "source_member": "ORCA_EditPredict/tokenizer/special_tokens_map.json",
+      "published_path": "code/historical/tokenizer/special_tokens_map.json",
+      "source_sha256": "5f89dfed5b1bcb31b03a93b608b8c7fc5ac8465f2f4b839f6f6f4aa87d683407",
+      "published_sha256": "5f89dfed5b1bcb31b03a93b608b8c7fc5ac8465f2f4b839f6f6f4aa87d683407",
+      "transformation": "byte-identical copy"
+    },
+    {
+      "source_member": "ORCA_EditPredict/tokenizer/tokenizer_config.json",
+      "published_path": "code/historical/tokenizer/tokenizer_config.json",
+      "source_sha256": "9dee94dd3f82b377ff6070f6df93aac4a3e8251aea61b9421f5aca05674f5c1f",
+      "published_sha256": "9dee94dd3f82b377ff6070f6df93aac4a3e8251aea61b9421f5aca05674f5c1f",
+      "transformation": "byte-identical copy"
+    },
+    {
+      "source_member": "ORCA_EditPredict/tokenizer/vocab.txt",
+      "published_path": "code/historical/tokenizer/vocab.txt",
+      "source_sha256": "6e2533a6a62d7832f4de311c5829d353ecf9a34399e644ba82d96970e98864ea",
+      "published_sha256": "6e2533a6a62d7832f4de311c5829d353ecf9a34399e644ba82d96970e98864ea",
+      "transformation": "byte-identical copy"
+    }
+  ]
+}

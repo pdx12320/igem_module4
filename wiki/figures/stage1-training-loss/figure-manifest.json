@@ -1,0 +1,72 @@
+{
+  "template_version": "orca-data-1.1",
+  "font": "Futura",
+  "cjk_font": "Arial Unicode MS",
+  "notes": [],
+  "runtime": {
+    "python": "3.12.14",
+    "matplotlib": "3.10.8",
+    "numpy": "2.5.3"
+  },
+  "export": {
+    "width_in": 10.0,
+    "height_in": 7.5,
+    "dpi": 192.0,
+    "display_width_px": 960,
+    "svg_text": "paths",
+    "pdf_fonttype": 42
+  },
+  "provenance": {
+    "audience": "iGEM wiki, 960 CSS px display width",
+    "uncertainty": "No error intervals or significance tests; no independent replicate estimates supplied",
+    "exclusions": "No observations removed for outlier status or aesthetics",
+    "smoothing": "None",
+    "random_seed": null,
+    "plot_script": {
+      "path": "figure-sources/plot.py",
+      "sha256": "462b7424ba7d1a3facbb3a80f00358d4501ac37d1b283b276fb7e366d7797469",
+      "read_range": "complete script"
+    },
+    "sources": [
+      {
+        "path": "results/model_1024_classifier/1024_orca_puf12/final_model/log_history.json",
+        "sha256": "6ab7875c7861b1109e10b9b86906c0c52ccea076e6c3eadab6528730ebd1ee56",
+        "read_range": "log_history, or complete list: loss and eval_pr_auc with epoch and step"
+      },
+      {
+        "path": "results/model_1024_classifier/1024_lamar_puf12/final_model/checkpoint-1380/trainer_state.json",
+        "sha256": "efc94f08cb17a4c8ba7c81c28b79a1ae376e7d64ef5df193dc9771cd8aa09915",
+        "read_range": "log_history, or complete list: loss and eval_pr_auc with epoch and step"
+      },
+      {
+        "path": "results/model_1024_classifier/1024_orca_puf12_frozen_encoder/final_model/checkpoint-1260/trainer_state.json",
+        "sha256": "ec85fce689e10bb0e9042e3dd32e4356675e2c9367e58c57667b57bc7029b5c8",
+        "read_range": "log_history, or complete list: loss and eval_pr_auc with epoch and step"
+      },
+      {
+        "path": "results/model_1024_classifier/1024_lamar_puf12_frozen_encoder/final_model/checkpoint-1440/trainer_state.json",
+        "sha256": "9e47748ce93dc99b2c8cf072fc930d7552ecf1ba5e5e92e07527d4274af13a90",
+        "read_range": "log_history, or complete list: loss and eval_pr_auc with epoch and step"
+      },
+      {
+        "path": "results/model_1024_classifier/1024_orca_puf12_random/final_model/checkpoint-1080/trainer_state.json",
+        "sha256": "ad3034c0008706ed89fe07051c0da681541836198b1197ebd8008cf3fdb49700",
+        "read_range": "log_history, or complete list: loss and eval_pr_auc with epoch and step"
+      }
+    ],
+    "chart_type": "line with all logged observation markers; fixed variant styles",
+    "analysis_unit": "one training run per variant; logged training intervals or validation evaluations",
+    "n": {
+      "training_region_records": 3835,
+      "validation_region_records": 213,
+      "validation_positives": 150
+    },
+    "transforms": [],
+    "axis_range": [
+      0,
+      0.72
+    ],
+    "missing": "Logs have unequal endpoints; no extrapolation or imputation",
+    "record_handling": "Post-training restored-checkpoint evaluation retained in data, excluded only from the chronological training curve"
+  }
+}

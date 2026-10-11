@@ -1,0 +1,1 @@
+Five Stage I validation average-precision trajectories fluctuate across epochs. Original frozen LAMAR reaches the highest logged AP, about 0.818, while adapted tuned LAMAR peaks near 0.810. A faint reference line indicates validation positive-label prevalence, about 0.704.

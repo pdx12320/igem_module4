@@ -1,0 +1,216 @@
+{
+  "continued_pretraining": {
+    "evaluation_points": 100,
+    "first_saved_evaluation": {
+      "epoch": 0.01,
+      "eval_loss": 1.061832308769226,
+      "eval_masked_accuracy": 0.5320836602307737,
+      "eval_runtime": 71.8285,
+      "eval_samples_per_second": 139.221,
+      "eval_steps_per_second": 11.611,
+      "step": 1000
+    },
+    "last_saved_evaluation": {
+      "epoch": 1.45,
+      "eval_loss": 0.9717015624046326,
+      "eval_masked_accuracy": 0.5754675749631643,
+      "eval_runtime": 71.0163,
+      "eval_samples_per_second": 140.813,
+      "eval_steps_per_second": 11.744,
+      "step": 100000
+    },
+    "original_model_0_505_baseline": "draft-only"
+  },
+  "cross_split_overlap": {
+    "train-test": {
+      "context_occurrences_left": 17605,
+      "context_occurrences_right": 11081,
+      "region_occurrences_left": 2,
+      "region_occurrences_right": 2,
+      "shared_unique_101nt_C_centered_contexts": 9919,
+      "shared_unique_region_sequences": 2
+    },
+    "train-valid": {
+      "context_occurrences_left": 17751,
+      "context_occurrences_right": 11257,
+      "region_occurrences_left": 2,
+      "region_occurrences_right": 1,
+      "shared_unique_101nt_C_centered_contexts": 10312,
+      "shared_unique_region_sequences": 1
+    },
+    "valid-test": {
+      "context_occurrences_left": 5723,
+      "context_occurrences_right": 5620,
+      "region_occurrences_left": 0,
+      "region_occurrences_right": 0,
+      "shared_unique_101nt_C_centered_contexts": 5471,
+      "shared_unique_region_sequences": 0
+    }
+  },
+  "datasets": {
+    "test": {
+      "csv_json_row_disagreements": 0,
+      "cytidine_candidate_occurrences": 39381,
+      "full_1024nt_regions": 155,
+      "label_length_mismatches": 0,
+      "maximum_length_nt": 1024,
+      "minimum_length_nt": 271,
+      "positive_labels_at_non_C": 0,
+      "positive_regions": 140,
+      "positive_site_occurrences": 330,
+      "region_rows": 212,
+      "unique_region_sequences": 212,
+      "zero_positive_regions": 72
+    },
+    "train": {
+      "csv_json_row_disagreements": 0,
+      "cytidine_candidate_occurrences": 722477,
+      "full_1024nt_regions": 2748,
+      "label_length_mismatches": 0,
+      "maximum_length_nt": 1024,
+      "minimum_length_nt": 73,
+      "positive_labels_at_non_C": 0,
+      "positive_regions": 2643,
+      "positive_site_occurrences": 7130,
+      "region_rows": 3835,
+      "unique_region_sequences": 3825,
+      "zero_positive_regions": 1192
+    },
+    "valid": {
+      "csv_json_row_disagreements": 0,
+      "cytidine_candidate_occurrences": 39344,
+      "full_1024nt_regions": 148,
+      "label_length_mismatches": 0,
+      "maximum_length_nt": 1024,
+      "minimum_length_nt": 129,
+      "positive_labels_at_non_C": 0,
+      "positive_regions": 150,
+      "positive_site_occurrences": 402,
+      "region_rows": 213,
+      "unique_region_sequences": 213,
+      "zero_positive_regions": 63
+    }
+  },
+  "errors": [],
+  "import_manifest": {
+    "byte_identical_entries": 48,
+    "entries": 56,
+    "note": "Checks published bytes against recorded digests; transformed originals require the source archive for independent verification.",
+    "source_archive_available_required": false,
+    "transformed_entries": 8
+  },
+  "metric_definition": "Historical pr_auc is non-interpolated average precision (AP), not trapezoidal PR area.",
+  "positive_tsv": {
+    "all_contexts_101nt_centered_on_C": true,
+    "note": "No raw supporting-read/depth columns or mapping to split rows; draft selection thresholds cannot be reconstructed.",
+    "rows": 12908,
+    "strand_allele_counts": {
+      "+:C>T": 6320,
+      "-:G>A": 6588
+    },
+    "unique_coordinate_strand_tuples": 12908
+  },
+  "scope": "Saved-artifact integrity and descriptive audit; no model execution",
+  "stage_i_best_search": {
+    "params": {
+      "batch_config": "batch4_accum2",
+      "learning_rate": 6.706824153824951e-05,
+      "token_dropout": 0.005515807069728134,
+      "warmup_ratio": 0.05338263866669417,
+      "weight_decay": 7.919413614819866e-06
+    },
+    "trial_number": 17,
+    "validation_pr_auc": 0.8134355864775149
+  },
+  "stage_i_checkpoint_comparisons": {
+    "1024_lamar_puf12": {
+      "best_logged_validation_AP": 0.7975657687605006,
+      "evaluation_points_in_saved_checkpoint": 23,
+      "saved_checkpoint_step": 1380,
+      "source": "results/model_1024_classifier/1024_lamar_puf12/final_model/checkpoint-1380/trainer_state.json"
+    },
+    "1024_lamar_puf12_frozen_encoder": {
+      "best_logged_validation_AP": 0.8180507778528645,
+      "evaluation_points_in_saved_checkpoint": 24,
+      "saved_checkpoint_step": 1440,
+      "source": "results/model_1024_classifier/1024_lamar_puf12_frozen_encoder/final_model/checkpoint-1440/trainer_state.json"
+    },
+    "1024_orca_puf12": {
+      "best_logged_validation_AP": 0.8100144358544475,
+      "evaluation_points_in_saved_checkpoint": 4,
+      "saved_checkpoint_step": 240,
+      "source": "results/model_1024_classifier/1024_orca_puf12/final_model/checkpoint-240/trainer_state.json"
+    },
+    "1024_orca_puf12_frozen_encoder": {
+      "best_logged_validation_AP": 0.7812724672140144,
+      "evaluation_points_in_saved_checkpoint": 21,
+      "saved_checkpoint_step": 1260,
+      "source": "results/model_1024_classifier/1024_orca_puf12_frozen_encoder/final_model/checkpoint-1260/trainer_state.json"
+    },
+    "1024_orca_puf12_random": {
+      "best_logged_validation_AP": 0.741636605406607,
+      "evaluation_points_in_saved_checkpoint": 18,
+      "saved_checkpoint_step": 1080,
+      "source": "results/model_1024_classifier/1024_orca_puf12_random/final_model/checkpoint-1080/trainer_state.json"
+    }
+  },
+  "stage_i_final_hyperparameters": {
+    "batch_config": "batch4_accum2",
+    "gradient_accumulation_steps": 2,
+    "learning_rate": 6.706824153824951e-05,
+    "num_train_epochs": 15,
+    "per_device_train_batch_size": 4,
+    "token_dropout": 0.005515807069728134,
+    "warmup_ratio": 0.05338263866669417,
+    "weight_decay": 7.919413614819866e-06
+  },
+  "stage_i_final_validation": {
+    "epoch": 7.0,
+    "eval_accuracy": 0.6995305164319249,
+    "eval_f1": 0.7987421383647799,
+    "eval_false_negative": 23,
+    "eval_false_positive": 41,
+    "eval_loss": 0.6120158433914185,
+    "eval_pr_auc": 0.8100144358544475,
+    "eval_precision": 0.7559523809523809,
+    "eval_recall": 0.8466666666666667,
+    "eval_roc_auc": 0.65005291005291,
+    "eval_runtime": 1.4657,
+    "eval_samples_per_second": 145.32,
+    "eval_steps_per_second": 9.552,
+    "eval_true_negative": 22,
+    "eval_true_positive": 127
+  },
+  "stage_i_test_positive_prevalence": 0.660377358490566,
+  "stage_i_test_recomputed_from_saved_predictions": {
+    "accuracy": 0.6132075471698113,
+    "f1": 0.7092198581560284,
+    "false_negative": 40,
+    "false_positive": 42,
+    "num_negative": 72,
+    "num_positive": 140,
+    "num_samples": 212,
+    "pr_auc": 0.7222672656649612,
+    "precision": 0.704225352112676,
+    "recall": 0.7142857142857143,
+    "roc_auc": 0.560218253968254,
+    "true_negative": 30,
+    "true_positive": 100
+  },
+  "status": "pass_with_documented_limitations",
+  "syntax": {
+    "json_files_parsed": 35,
+    "python_files_parsed_without_execution": 7
+  },
+  "warnings": [
+    "Exact region and C-centered context sequences occur across splits. Four unique region sequences have conflicting binary labels across their occurrences. Transcript/gene IDs and the split builder are absent; transcript-disjoint generalization cannot be verified.",
+    "Stage II evaluates only regions with a labelled positive (150 validation, 140 test), excluding zero-positive regions. Draft ranking metrics are not an end-to-end gated pipeline evaluation.",
+    "Per-candidate Stage II scores and machine-readable ranking evaluation results are absent. Draft ranking values cannot be independently recomputed from this bundle.",
+    "Historical Stage I tokenization uses max_length=103 while training/evaluation declare 1026. The original tokenized cache is absent, so effective historical training context is unresolved.",
+    "This publication repository omits large model weights and pretraining inputs that are retained in the original archive (see archive-inventory.json). The local LAMAR implementation, split-construction code, tokenized cache and pinned training environment are missing from the supplied archive. Historical training/evaluation is not runnable from this repository alone.",
+    "Stage II training_state.json was invalid JSON (trailing comma); the original is preserved as training_state.json.txt rather than silently repaired.",
+    "The drafts' original-model masked accuracy 0.505, transcriptome size, positive-label thresholds and Stage II AP around 0.2 are not independently recoverable from saved evaluation artifacts.",
+    "Saved Stage I search and final-run settings differ from draft hyperparameters. Stage II source uses ranking loss, a scalar center-token head and fixed settings, not the draft binary-classifier/Optuna description.",
+    "These checks establish artifact consistency, not model retraining, biological validation, probability calibration or off-target safety."
+  ]
+}

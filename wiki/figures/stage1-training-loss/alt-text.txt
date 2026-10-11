@@ -1,0 +1,1 @@
+Training-loss curves for five Stage I model variants. Adapted and original fully tuned models reach much lower training loss than frozen-encoder or random-initialized variants. Each curve ends where its saved log ends; the runs are not independent replicates.

@@ -1,0 +1,1 @@
+Two vertically aligned plots show continued-pretraining loss and validation masked-token accuracy through 100,000 optimizer steps. Accuracy rises from the earliest logged value of about 0.532 to 0.575; loss generally decreases after an early rise. No step-zero baseline is available.

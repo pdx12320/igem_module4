@@ -1,0 +1,15 @@
+# Keep imported scientific files byte-identical across checkout environments.
+data/** -text
+code/historical/** -text
+results/** -text
+provenance/source-documents/** -text
+
+# Distinguish preserved/generated material from authored documentation in review.
+data/** linguist-vendored
+code/historical/** linguist-vendored
+results/** linguist-generated
+provenance/source-documents/** linguist-vendored
+wiki/figures/** linguist-generated
+figure-sources/orca_plot.py linguist-vendored
+*.png binary
+*.pdf binary

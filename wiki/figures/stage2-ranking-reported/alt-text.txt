@@ -1,0 +1,1 @@
+Discrete points show draft-reported Stage II Hit@K and Recall@K for K equal to 1, 5, 10, and 20. Hit rises from 0.243 at K 1 to 0.921 at K 20; Recall is absent at K 1 and rises from 0.373 at K 5 to 0.792 at K 20. Values cover only 140 positive-containing regions and were not independently recomputed.

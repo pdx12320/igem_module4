@@ -1,0 +1,6 @@
+group,training_loss_records,validation_records,last_logged_epoch,best_logged_validation_ap,best_epoch,best_step
+"Adapted, tuned",28,14,7.0,0.8100144358544475,2.0,240
+"Original, tuned",46,23,11.5,0.7975657687605006,6.5,780
+"Adapted, frozen",42,21,10.5,0.7812724672140144,5.5,660
+"Original, frozen",48,24,12.0,0.8180507778528645,7.0,840
+"Random, tuned",36,18,9.0,0.741636605406607,4.0,480

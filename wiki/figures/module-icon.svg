@@ -1,0 +1,22 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="256" height="256" viewBox="0 0 256 256" role="img" aria-labelledby="title desc">
+  <title id="title">ORCA EditPredict</title>
+  <desc id="desc">An abstract single RNA strand beside a ranked candidate list. The orange candidate indicates prioritization, not a measured editing site.</desc>
+  <rect x="8" y="8" width="240" height="240" rx="48" fill="#FFFEFC" stroke="#E9E8FF" stroke-width="2"/>
+  <path d="M59 59 C107 48 127 76 94 103 C56 134 62 168 107 185" fill="none" stroke="#2E267C" stroke-width="10" stroke-linecap="round"/>
+  <g fill="#E9E8FF" stroke="#2E267C" stroke-width="4">
+    <circle cx="63" cy="58" r="11"/>
+    <circle cx="108" cy="75" r="11"/>
+    <circle cx="85" cy="112" r="11"/>
+    <circle cx="73" cy="153" r="11"/>
+    <circle cx="107" cy="185" r="11"/>
+  </g>
+  <circle cx="85" cy="112" r="11" fill="#E89B3C" stroke="#2E267C" stroke-width="4"/>
+  <g stroke-linecap="round" stroke-width="8">
+    <path d="M161 79 H208" stroke="#2E267C"/>
+    <path d="M161 126 H197" stroke="#9D9CF4"/>
+    <path d="M161 173 H185" stroke="#9D9CF4"/>
+  </g>
+  <path d="M144 69 L154 79 L144 89 L134 79 Z" fill="#E89B3C" stroke="#2E267C" stroke-width="3"/>
+  <circle cx="144" cy="126" r="7" fill="#E9E8FF" stroke="#2E267C" stroke-width="3"/>
+  <circle cx="144" cy="173" r="7" fill="#E9E8FF" stroke="#2E267C" stroke-width="3"/>
+</svg>
