@@ -2,80 +2,80 @@
 
 ## Engineering objective
 
-Prioritize PUF12-associated RNA editing candidates for targeted follow-up using sequence evidence and RNA-seq-derived labels. Continued pretraining precedes a region classifier (Stage I) and a cytidine ranker (Stage II).
+We aimed to prioritize PUF12-associated RNA editing candidates for targeted experimental follow-up. RNA-seq provided positive editing evidence, while LAMAR supplied sequence representations. Our workflow combines human transcriptome adaptation, regional classification and cytidine ranking.
 
-This record separates source-reported development, saved computational outputs and checks performed during repository preparation. No model was trained and no new biological experiment was performed for this revision.
+The central challenge was to connect model outputs with a practical screening decision. Observed editing can support positive labels, but absence of detection does not establish that a cytidine cannot be edited.
 
-## Cycle 1 | Adapt RNA sequence representations to the human transcriptome
+## Cycle 1 | Adapt sequence representations to human transcripts
 
-**Design.** The source proposed adapting LAMAR to human transcripts before fitting editing labels. Masked sequence reconstruction supplied an unsupervised objective, distinct from predicting whether editing occurs. [Zhou et al., 2025](https://doi.org/10.1186/s13059-025-03752-x).
+**Design.** We asked whether continued pretraining could adapt LAMAR representations to the human transcriptome before learning editing-associated labels. Masked nucleotide prediction provided an unsupervised objective for this step. [Zhou et al., 2025](https://doi.org/10.1186/s13059-025-03752-x).
 
-**Build.** The source describes transcripts generated from GRCh38 and GENCODE release 50, followed by continued masked language modelling. The publication repository includes the training script and checkpoint history. Large transcriptome, pretraining-partition and weight files remain in the original source archive, as recorded in the inventory.
+**Build.** We continued masked language modelling on human transcript sequences derived from GRCh38 and GENCODE release 50. The model reconstructed masked nucleotides from their surrounding sequence context. [Mudge et al., 2025](https://doi.org/10.1093/nar/gkae1078); [GENCODE release history](https://www.gencodegenes.org/human/releases.html).
 
-**Test.** The saved log records masked nucleotide accuracy of **0.5755 at step 100,000**. The baseline accuracy of 0.505 occurs in the draft without a corresponding baseline evaluation file.
+**Test.** Masked nucleotide accuracy increased from **0.5321 at step 1,000** to **0.5755 at step 100,000**, across 100 recorded evaluations.
 
-**Learn.** The available history documents sequence reconstruction during adaptation. It does not independently establish the reported baseline comparison or guarantee improved editing prediction.
+**Learn.** Sequence reconstruction improved during adaptation, but this objective does not measure editing prediction. We therefore evaluated downstream classification separately rather than assuming that adaptation would improve every task.
 
-**Evidence:** [Figure 1](figures/pretraining-curves/figure@2x.png), [continued-pretraining records](../results/model_continual_pretrain/).
+**Evidence:** [Continued-pretraining curves](figures/pretraining-curves/figure@2x.png).
 
-## Cycle 2 | Separate observed editing from uncertain negative labels
+## Cycle 2 | Distinguish detected editing from uncertain negatives
 
-**Design.** The original draft sought positive labels supported by at least 20 editing reads and total depth of at least 100. These criteria describe the supplied source; the repository audit does not regenerate labels from raw sequencing reads.
+**Design.** We required positive-site evidence supported by at least **20 editing reads** and **100 total reads**. The aim was to reduce uncertainty among positive labels while preserving the distinction between undetected and non-editable cytidines.
 
-**Build.** The archived datasets pair transcript-region sequences with binary region labels and position-level editing labels. Nominal negative regions contain no recorded positive, rather than experimentally established non-editable cytidines.
+**Build.** We paired transcript-region sequences with binary region labels and position-level editing labels. A region was positive when it contained at least one labelled editing site. Other regions received nominal negative labels.
 
-**Test.** The supplied partitions contain **3,835 training, 213 validation and 212 test regions**. Their positive counts are **2,643, 150 and 140**, respectively. The position-label records agree with the corresponding binary region labels and sequence order.
+**Test.** The training, validation and test partitions contained **3,835, 213 and 212 regions**, respectively. Their positive counts were **2,643, 150 and 140**. Positive position-level labels occurred only at cytidines and agreed with the binary region labels.
 
-**Learn.** Label consistency supports reuse of the frozen files, while biological interpretation still depends on how editing was detected. Unobserved sites cannot automatically provide definitive negative evidence.
+**Learn.** Consistent labels make the computational task well defined, but do not remove uncertainty in biological negatives. Limited coverage, transcript abundance and editing frequency can all affect whether a site is detected.
 
-**Evidence:** [Region datasets](../data/1024nt_dataset/), [position-labelled datasets](../data/101nt_dataset/), [provenance](../provenance/).
+## Cycle 3 | Screen regions before prioritizing individual cytidines
 
-## Cycle 3 | Introduce region scoring before cytidine prioritization
+**Design.** We separated two questions: which regions are associated with detected editing, and which cytidines within those regions should be tested first? This allowed regional screening and local ranking to use different objectives.
 
-**Design.** The draft reports that direct cytidine classification performed poorly and motivated a regional screening step. Its cytidine-level AP of approximately 0.2 lacks the prediction files required for verification.
+**Build.** Stage I used a LAMAR-based binary region classifier, with Optuna selecting hyperparameters by validation average precision (AP). [Akiba et al., 2019](https://doi.org/10.1145/3292500.3330701). The intended regional input was up to **1,024 nt**. Stage II used **101-nt cytidine-centred contexts** and a scalar ranking head.
 
-**Build.** Stage I uses a LAMAR-based binary region classifier with Optuna selection by validation AP. Stage II uses a centre-token scalar head and multi-positive ranking loss, rather than the binary head described in the draft.
+**Test.** Stage I reached test **AP 0.7223** and **ROC AUC 0.5602** across 212 regions. Positive prevalence was **140/212 = 0.6604**. The best search-trial validation AP was **0.8134**, while the final model's validation AP was **0.8100**.
 
-**Test.** The archived Stage I test predictions reproduce **AP 0.7223 and ROC AUC 0.5602** over 212 regions. Positive prevalence is **140/212 = 0.6604**. The best Optuna validation AP, 0.8134, is distinct from final validation AP, 0.8100.
+**Learn.** The regional model showed modest discrimination on this partition. Its performance must be interpreted against the high positive prevalence and does not establish useful end-to-end recovery by itself. [Saito & Rehmsmeier, 2015](https://doi.org/10.1371/journal.pone.0118432).
 
-**Learn.** The regional classifier supplies a checkable screening result with limited separation on this partition. The tokenizer limits inputs to 103 tokens, while training and evaluation specify 1,026; the missing cache prevents resolving historical context length. The archive does not establish the complete pipeline's recall after a Stage I threshold, so regional and conditional ranking metrics remain separate.
+A context-length inconsistency also remains unresolved: tokenization specifies 103 tokens, while training and evaluation specify 1,026. Reconciling this discrepancy is necessary before testing the contribution of long-range sequence context.
 
-**Evidence:** [Figure 4](figures/stage1-test-pr/figure@2x.png), [saved test outputs](../results/model_1024_classifier/1024_orca_puf12/test_evaluation/), [Stage II implementation](../code/historical/model_101_classifier/train_orca_ranking_101.py).
+**Evidence:** [Stage I precision–recall curve](figures/stage1-test-pr/figure@2x.png).
 
-## Cycle 4 | Compare training conditions without overstating adaptation
+## Cycle 4 | Test whether adaptation improves downstream performance
 
-**Design.** The source compared adapted and original LAMAR, their encoder-frozen variants and a randomly initialized condition. These conditions probe different initialization and optimization choices.
+**Design.** We compared adapted and original LAMAR, their encoder-frozen variants and a randomly initialized model. These conditions tested the relationship between initialization, encoder training and regional prediction.
 
-**Build.** Five checkpoint histories preserve training loss and validation AP. The retained logs have different lengths, and the bundle does not provide repeated runs establishing uncertainty for between-condition comparisons.
+**Build.** We examined training loss and validation AP for all five conditions. These quantities describe different aspects of learning: fitting the training data and ranking labelled validation regions.
 
-**Test.** The frozen original-LAMAR history reaches **validation AP 0.8181**, while the retained adapted-model history reaches **0.8100**. The other logged maxima are 0.7976 for original fine-tuning, 0.7813 for frozen adapted LAMAR and 0.7416 for random initialization.
+**Test.** Frozen original LAMAR reached validation **AP 0.8181**, compared with **0.8100** in the adapted model's retained history. The other maxima were **0.7976** for original fine-tuning, **0.7813** for frozen adapted LAMAR and **0.7416** for random initialization.
 
-**Learn.** Lower training loss and higher validation AP answer different questions. These records do not establish consistent superiority of continued pretraining, and the comparison remains descriptive.
+**Learn.** The comparisons did not establish consistent superiority of continued pretraining. Different training lengths and the absence of repeated runs limit the strength of between-condition conclusions. Training loss alone should not determine which model enters the next experimental cycle.
 
-**Evidence:** [Training loss](figures/stage1-training-loss/figure@2x.png), [validation AP](figures/stage1-validation-ap/figure@2x.png), [saved Stage I histories](../results/model_1024_classifier/).
+**Evidence:** [Training loss](figures/stage1-training-loss/figure@2x.png) and [validation AP](figures/stage1-validation-ap/figure@2x.png).
 
-## Cycle 5 | Align ranking metrics with their actual evaluation population
+## Cycle 5 | Evaluate ranking against a limited candidate budget
 
-**Design.** Candidate ranking asks whether labelled editing sites appear early enough for a limited experimental screen. The archived evaluator reports Hit@K, Recall@K and mean reciprocal rank within each eligible region.
+**Design.** Experimental screening can test only a subset of cytidines. We therefore evaluated whether labelled editing sites appeared among the highest-scoring candidates using Hit@K, Recall@K and mean reciprocal rank.
 
-**Build.** Stage II scores 101-nt cytidine contexts and selects the checkpoint using validation Hit@10. Regions without labelled positive candidates are skipped. The retained checkpoint state records epoch two, learning rate 5 × 10⁻⁶ and accumulation of eight.
+**Build.** Stage II used a multi-positive ranking loss and selected its checkpoint by validation Hit@10. The selected checkpoint was from epoch two. Ranking evaluation excluded regions without labelled positives, leaving **150 validation and 140 test regions**.
 
-**Test.** Checkpoint metadata records validation Hit@10 of **0.8467**. The draft reports test Hit@5, Hit@10 and Hit@20 of **0.607, 0.779 and 0.921**, respectively, over 140 positive regions. Missing candidate-score outputs prevent recomputation of the full ranking summaries.
+**Test.** Checkpoint metadata records validation **Hit@10 of 0.8467**. The project summary reports test **Hit@5 of 0.607**, **Hit@10 of 0.779** and **Hit@20 of 0.921**, with median best rank **4**. These test summaries remain provisional because the underlying candidate scores are unavailable for independent reproduction.
 
-**Learn.** Ranking results concern regions already known to contain positive labels. They do not quantify performance on all transcriptomic regions, prove calibrated editing probabilities or replace prospective experimental confirmation.
+**Learn.** Conditional ranking provides an initial basis for selecting candidates within positive regions. It does not establish performance across all transcriptomic regions or after Stage I selection. A complete assessment must include regions that Stage I misses and candidates that experiments do not confirm.
 
-**Evidence:** [Figure 5](figures/stage2-ranking-reported/figure@2x.png), [saved Stage II metadata](../results/model_101_classifier/), [evaluation code](../code/historical/model_101_classifier/evaluation_top_ranking.py).
+**Evidence:** [Reported Stage II ranking performance](figures/stage2-ranking-reported/figure@2x.png).
 
-## Repository audit | Check the claimed evaluation boundary
+## Next cycle | Establish independent end-to-end performance
 
-**Question.** The original draft calls the test set independent and describes a transcript-level split. We checked whether the supplied files support those descriptions without modifying any partition.
+**Design.** The next evaluation must separate related sequences and test the full screening procedure. Current training data share one complete region with validation and two with test, alongside extensive local-context overlap. Transcript-disjoint performance remains unestablished. Similarity-aware separation of biomolecular sequences provides a rationale for the next split design. [Joeres et al., 2025](https://doi.org/10.1038/s41467-025-58606-8).
 
-**Check.** Transcript identifiers and the dataset builder are absent. Exact sequence comparison identifies one shared full region between training and validation and two between training and test. The corresponding sets share **10,312 and 9,919 unique 101-nt candidate contexts**.
+**Build.** We will restore transcript provenance, reconcile input tokenization and retain all candidate scores. Regional selection and the number of candidates tested per region should be fixed before evaluating new data.
 
-**Consequence.** The public narrative uses “test partition” and “regions”, avoiding an independently verified transcript-disjoint claim. These checks assess archive consistency and overlap; they do not create a new benchmark or repair the frozen split.
+**Test.** Planned assays will compare high-ranked candidates with appropriate low-ranked controls under defined editor and cell conditions. End-to-end recovery and experimental precision will connect computational scores with the intended screening use.
 
-## Next iteration
+**Learn.** Newly confirmed editing and non-editing outcomes can improve subsequent training labels. Prospective results will determine whether the workflow reduces experimental effort while retaining relevant candidate sites.
 
-The next model-development cycle requires restored transcript provenance, an explicitly grouped split and complete per-candidate predictions. New experiments should evaluate high-ranked candidates alongside appropriate controls under defined editor and cell conditions.
+## Data and code availability
 
-A future test should lock the Stage I selection rule and Stage II ranking budget before evaluating new data. Reporting end-to-end recovery and experimental precision would connect computational scores to the proposed screening use. Changes to labels, reference versions or partitions require a separately documented analysis; none were made here.
+Datasets, analysis code, training records and reproducibility notes are available in the original [Module 4 GitHub repository](https://github.com/pdx12320/igem_module4). The [main wiki](module4.md) presents the model design, results and interpretation.

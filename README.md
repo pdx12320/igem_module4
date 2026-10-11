@@ -11,6 +11,10 @@ This repository organizes the ORCA_EditPredict archive for the PUF12 RNA editing
 1. **[Main wiki](wiki/module4.md)**: background, model overview, results, discussion, data availability and references.
 2. **[DBTL record](wiki/DBTL.md)**: separate design, build, test and learn decisions, with links to the supporting evidence.
 
+![Module 4 training and proposed screening workflow](wiki/figures/workflow/figure@2x.png)
+
+The workflow separates model development from the proposed screening application. Download the editable [PowerPoint source](wiki/figures/workflow/figure.pptx) or [vector PDF](wiki/figures/workflow/figure.pdf).
+
 ![Stage I test precision–recall curve](wiki/figures/stage1-test-pr/figure@2x.png)
 
 The curve is reconstructed from archived test probabilities. Average precision is **0.7223** over **212 regions**, with positive prevalence **0.6604**. No model inference was needed to redraw it.

@@ -2,19 +2,23 @@
 
 ## Background
 
-RNA sequencing (RNA-seq) identifies editing events under the conditions measured, but does not exhaustively establish which cytidines can be edited. An undetected event may reflect limited coverage, transcript abundance or editing frequency. Consequently, unobserved cytidines provide uncertain negative labels for sequence-based prediction.
+Programmable RNA editing requires both useful target activity and control over editing elsewhere. Related PUF-guided editors illustrate how programmable targeting can coexist with off-target RNA editing. [Han et al., 2022](https://doi.org/10.1093/nar/gkac713). RNA sequencing (RNA-seq) reveals editing events under the conditions measured, but cannot exhaustively identify every susceptible cytidine. An undetected event may reflect low transcript abundance, limited coverage or low editing frequency.
 
-Module 4 examines a two-stage workflow for prioritizing candidate C-to-U editing sites from the PUF12 dataset. Stage I scores transcript regions; Stage II ranks cytidines within regions. This connects the RNA-seq evidence in [Module 1](https://github.com/pdx12320/igem_module1) with candidate selection for subsequent editor-engineering experiments.
+Our dry-lab modules address complementary parts of this problem. RNA-seq analysis supplies editing evidence, while PUF and APOBEC modelling guide editor design. Module 4 asks whether RNA sequence representations can help prioritize candidate sites for subsequent experimental testing. We focused on the PUF12 dataset and separated regional screening from cytidine ranking.
 
-The workflow builds on LAMAR, a Transformer-based RNA foundation model pretrained through masked nucleotide prediction. Its published applications motivate adaptation to RNA sequence tasks, without establishing performance for this project's editing labels. [Zhou et al., 2025](https://doi.org/10.1186/s13059-025-03752-x).
+We built the workflow around LAMAR, a Transformer-based RNA foundation model trained through masked nucleotide prediction. Its ability to support multiple RNA regulatory tasks provides a rationale for adapting sequence representations to editing-associated labels. [Zhou et al., 2025](https://doi.org/10.1186/s13059-025-03752-x).
 
 ## Model overview
 
-### Sequence evidence and evaluation units
+![Module 4 workflow showing model development and the proposed two-stage candidate-screening application.](figures/workflow/figure@2x.png)
 
-The source narrative defines positive sites using at least 20 editing-supporting reads and total depth of at least 100. These criteria are retained as the source description, rather than reconstructed from raw sequencing reads. Nominal negatives indicate absence of a positive label, not confirmed resistance to editing.
+**Workflow.** Continued pretraining and RNA-seq-labelled fine-tuning produce regional and cytidine-scoring models. The proposed application passes prioritized regions from Stage I to Stage II and nominates candidates for experimental validation. Evaluation currently addresses the individual stages; the complete screening pipeline remains unevaluated.
 
-The supplied region datasets contain the following records. Short terminal regions are retained alongside full 1,024-nt inputs.
+### RNA-seq evidence defines the prediction task
+
+The upstream positive-site definition required at least **20 editing-supporting reads** and **100 total reads**. Cytidines without a positive label remain nominal negatives, rather than experimentally confirmed non-editable sites.
+
+We organized prediction at two sequence scales. Stage I assigns a score to transcript regions of up to **1,024 nt**, including shorter terminal regions. A region is positive when it contains at least one labelled editing site. Stage II scores **101-nt cytidine-centred contexts** and ranks candidates within each region.
 
 | Partition | Regions | Positive regions | Nominal negative regions |
 |---|---:|---:|---:|
@@ -22,59 +26,61 @@ The supplied region datasets contain the following records. Short terminal regio
 | Validation | 213 | 150 | 63 |
 | Test | 212 | 140 | 72 |
 
-The original description specifies 128-nt overlap and a transcript-level split. However, transcript identifiers and the dataset-generation script are absent. The audit finds one shared full region sequence between training and validation, and two between training and test. These partitions therefore cannot support an independently verified transcript-disjoint evaluation claim.
+Region labels agree with the presence or absence of positive position-level labels. All positive position-level labels occur at cytidines. The evaluation unit is a sequence region; these counts do not represent verified unique transcripts.
 
-### Continued pretraining and region classification
+### Human transcriptome adaptation and regional classification
 
-The source describes continued masked language modelling using GRCh38 transcripts derived from GENCODE release 50. GENCODE dates this release to June 2026. The transcriptome FASTA and pretraining partitions remain in the original source archive and are omitted from this publication repository. Their corpus counts were not recomputed. [GENCODE release history](https://www.gencodegenes.org/human/releases.html).
+Continued masked language modelling used human transcript sequences derived from GRCh38 and GENCODE release 50. This adaptation step learns sequence context without editing labels. GENCODE release 50 was published in June 2026. [Mudge et al., 2025](https://doi.org/10.1093/nar/gkae1078); [GENCODE release history](https://www.gencodegenes.org/human/releases.html).
 
-The supplied downstream scripts configure a 12-layer encoder with 768 hidden units, 12 attention heads and rotary positional embeddings. Stage I adds a binary classification head and selects configurations using validation average precision (AP). The saved key `pr_auc` denotes `average_precision_score`, not a separately computed trapezoidal precision–recall area.
+The downstream encoder was configured with **12 layers, 768 hidden units, 12 attention heads and rotary positional embeddings**. Stage I adds a binary classification head. Hyperparameter selection used validation **average precision (AP)**, which summarizes precision as recall increases. AP was computed with `average_precision_score`; it is distinct from trapezoidal area under a precision–recall curve.
 
-The supplied Stage I tokenization script limits inputs to 103 tokens, whereas training and evaluation declare 1,026. Without the tokenized cache, the historical training context length cannot be confirmed.
+Stage I used a learning rate of **6.7068 × 10⁻⁵**, weight decay of **7.9194 × 10⁻⁶** and token dropout of **0.00552**. Training used batches of four, gradient accumulation of two and up to 15 epochs. Optuna selected hyperparameters using validation AP. [Akiba et al., 2019](https://doi.org/10.1145/3292500.3330701).
 
-The selected configuration records a learning rate of 6.7068 × 10⁻⁵, weight decay of 7.9194 × 10⁻⁶ and token dropout of 0.00552. It uses batches of four, gradient accumulation of two and up to 15 epochs. These saved settings supersede the conflicting values in the original prose.
+### Cytidine ranking matches a limited screening budget
 
-### Cytidine ranking
+Stage II extracts a 101-nt context around each candidate cytidine, using N padding at region boundaries. A scalar prediction head scores the central token representation. The multi-positive ranking loss compares the aggregate exponentiated score of labelled positives with that of all candidates in the region.
 
-Stage II extracts 101-nt contexts centred on candidate cytidines, padding sequence boundaries as implemented in the archived code. A scalar head scores the central token representation. A multi-positive ranking loss compares the aggregate exponentiated score of labelled positives with that of all candidates in each region.
+Training used a learning rate of **5 × 10⁻⁶**, weight decay of **0.01** and gradient accumulation of eight. The selected checkpoint was from epoch two, using validation Hit@10 as the selection metric. The output is a ranking score, not a calibrated editing probability.
 
-This implementation differs from the draft's binary-classifier description. The saved training record specifies a learning rate of 5 × 10⁻⁶, weight decay of 0.01 and gradient accumulation of eight. The selected checkpoint is from epoch two, using validation Hit@10 as the selection metric.
-
-Hit@K measures whether a region has a labelled positive among its top K candidates. Recall@K averages the fraction of labelled positives recovered within each region. Mean reciprocal rank (MRR) uses the rank of the first labelled positive. The evaluator skips regions without positive candidates; ranking summaries are therefore conditional on positive regions.
+**Hit@K** measures the fraction of regions with a labelled positive among their top K candidates. **Recall@K** averages the fraction of labelled positives recovered within each region. **Mean reciprocal rank (MRR)** uses the rank of the first labelled positive. Regions without positive candidates are excluded from these ranking summaries.
 
 ## Results
 
-### Logged masked accuracy increases during continued pretraining
+### Masked nucleotide reconstruction improved during continued pretraining
 
-The logged masked nucleotide accuracy increases from **0.5321 at step 1,000** to **0.5755 at step 100,000**. The curves below reproduce 100 recorded evaluation points. The original draft reports an initial-model accuracy of 0.505, but its separate evaluation output is absent. The archive therefore supports the final logged value without independently establishing the stated before-and-after comparison.
+Masked nucleotide accuracy increased from **0.5321 at step 1,000** to **0.5755 at step 100,000** across 100 recorded evaluations. This measures reconstruction during adaptation; it does not directly assess editing prediction.
 
 ![Training loss and masked nucleotide accuracy during continued pretraining.](figures/pretraining-curves/figure@2x.png)
 
-**Figure 1.** Continued-pretraining history reconstructed from the supplied checkpoint log. Masked nucleotide accuracy evaluates sequence reconstruction, not editing prediction.
+**Figure 1.** Continued-pretraining loss and masked nucleotide accuracy. Accuracy rises from 0.5321 at the first recorded evaluation to 0.5755 at step 100,000.
 
-### Stage I performance depends on the comparison and partition
+### Regional classification showed modest discrimination
 
-The best Optuna trial reached validation AP **0.8134**. The final model's separate validation report records **0.8100**, and the saved test predictions reproduce AP **0.7223** and ROC AUC **0.5602**. The test partition contains 140 positive regions among 212 records, giving a prevalence reference of **0.6604**.
+The best Optuna trial reached validation AP **0.8134**, while the final model's validation AP was **0.8100**. On the 212-region test partition, AP was **0.7223** and ROC AUC was **0.5602**. Positive prevalence was **140/212 = 0.6604**, providing a reference for interpreting the precision–recall curve. [Saito & Rehmsmeier, 2015](https://doi.org/10.1371/journal.pone.0118432).
+
+![Precision–recall curve for Stage I on the 212-region test partition.](figures/stage1-test-pr/figure@2x.png)
+
+**Figure 2.** Stage I test precision–recall curve. AP is 0.7223, with a positive-prevalence reference of 0.6604.
+
+### Adaptation did not consistently outperform the comparison conditions
+
+We compared fine-tuned adapted LAMAR, fine-tuned original LAMAR, their encoder-frozen variants and a randomly initialized model.
 
 ![Training-loss histories for five Stage I model conditions.](figures/stage1-training-loss/figure@2x.png)
 
-**Figure 2.** Saved training-loss histories for adapted, original, encoder-frozen and randomly initialized conditions. Runs have different logged training lengths.
+**Figure 3.** Stage I training loss across five initialization and training conditions. The runs have different recorded training lengths.
 
 ![Validation average precision histories for five Stage I model conditions.](figures/stage1-validation-ap/figure@2x.png)
 
-**Figure 3.** Logged validation AP across five conditions. The frozen original-LAMAR run reaches 0.8181, compared with 0.8100 in the adapted model's retained history.
+**Figure 4.** Validation AP across the five conditions. Frozen original LAMAR reaches 0.8181, compared with 0.8100 in the adapted model's retained history.
 
-These records do not establish consistent superiority of transcriptome adaptation. The saved test probabilities provide a checkable regional evaluation, but sequence overlap and uncertain negative labels limit generalization claims.
+The other recorded maxima were **0.7976** for original fine-tuning, **0.7813** for frozen adapted LAMAR and **0.7416** for random initialization. These single-run comparisons do not establish consistent superiority of continued pretraining. Reduced training loss alone is insufficient evidence of improved generalization.
 
-![Precision–recall curve reconstructed from the saved Stage I test probabilities.](figures/stage1-test-pr/figure@2x.png)
+### Cytidine ranking was evaluated within positive regions
 
-**Figure 4.** Stage I test precision–recall curve for 212 regions. AP is 0.7223; the prevalence reference is 140/212. The curve uses archived predictions without new model inference.
+The ranking evaluation considered **150 validation regions and 140 test regions** containing labelled positives. The project summary reported the following values.
 
-### Stage II ranking remains partly documented by the draft
-
-The source reports the following ranking results. Validation and test counts correspond to **150 and 140 positive regions**, respectively, rather than verified unique transcripts.
-
-| Metric | Validation, draft-reported | Test, draft-reported |
+| Metric | Validation | Test |
 |---|---:|---:|
 | Hit@1 | 0.247 | 0.243 |
 | Hit@5 | 0.607 | 0.607 |
@@ -86,27 +92,36 @@ The source reports the following ranking results. Validation and test counts cor
 | MRR | 0.409 | 0.406 |
 | Median best rank | 4 | 4 |
 
-![Draft-reported Stage II Hit@K and Recall@K values for 140 positive test regions.](figures/stage2-ranking-reported/figure@2x.png)
+![Reported Stage II Hit@K and Recall@K values for 140 positive test regions.](figures/stage2-ranking-reported/figure@2x.png)
 
-**Figure 5.** Test ranking summaries for 140 positive regions, transcribed from the supplied draft. The package lacks per-candidate scores needed to recompute these values; no Recall@1 value is inferred.
+**Figure 5.** Reported test ranking performance within positive regions. These summary values require independent reproduction because the underlying candidate scores are unavailable.
 
-The checkpoint metadata independently records validation Hit@10 of 0.8467, matching the rounded draft value. The remaining ranking summaries were not recomputed: candidate-score outputs are absent, and no new inference was run. The weights remain in the original archive. They do not measure end-to-end recovery after applying a Stage I selection threshold.
+The reported test Hit@10 corresponds to at least one labelled site among the first ten candidates in **77.9%** of evaluated positive regions. Validation Hit@10 of **0.8467** is also recorded in checkpoint metadata. The remaining summaries lack candidate-score outputs for verification, so they provide provisional evidence for prioritization. They do not measure recovery after a Stage I selection threshold.
 
 ## Discussion
 
-The workflow frames sequence prediction as candidate prioritization for experimental follow-up. Regional AP exceeds the test prevalence reference, but the current evidence does not establish a calibrated probability of editing. Conditional ranking results cannot establish transcriptome-wide specificity or quantify the benefit of the complete two-stage pipeline.
+Regional scoring and cytidine ranking address different experimental questions. Regional AP exceeded the test prevalence reference, whereas conditional ranking assessed how early labelled sites appeared within positive regions. Neither result establishes calibrated editing probabilities, transcriptome-wide specificity or the performance of the complete two-stage pipeline.
 
-The split audit also identifies 10,312 shared unique 101-nt candidate contexts between training and validation, and 9,919 between training and test. Related transcripts and overlapping contexts require explicit control before future evaluation. These findings are documented without changing the frozen labels, sequences or partitions.
+Evaluation independence is also limited. Training shares one complete region sequence with validation and two with test, alongside extensive overlap in 101-nt contexts. Transcript-disjoint generalization therefore remains unestablished. Future evaluation should group related sequences before splitting and assess performance on newly collected data. [Joeres et al., 2025](https://doi.org/10.1038/s41467-025-58606-8).
 
-The next iteration should restore transcript identifiers, audit sequence-related groups and evaluate a locked pipeline on new data. Targeted assays should include high-ranked candidates and suitable low-ranked controls. Newly measured editing and non-editing evidence could then inform subsequent models, while keeping model development separate from prospective evaluation.
+A preprocessing inconsistency also limits reproducibility: Stage I tokenization specifies 103 tokens, whereas training and evaluation specify 1,026. The effective context length of the historical training run remains unresolved. This must be reconciled before attributing performance to long-range sequence information.
+
+The next experimental step is to test high-ranked candidates alongside suitable low-ranked controls under defined editor and cell conditions. Measuring both outcomes would improve positive and negative evidence. A locked regional selection rule and ranking budget would allow evaluation of end-to-end recovery and experimental precision.
+
+## Conclusion
+
+Module 4 develops a sequence-based route from RNA-seq evidence to candidate prioritization. The current results define a testable workflow and its limitations, while prospective experiments remain necessary to establish its practical value.
 
 ## Data and code availability
 
-[Datasets](../data/), [saved results](../results/), [historical code](../code/historical/) and [provenance records](../provenance/) accompany this page. [Figure sources](../figure-sources/) retain redraw inputs and export metadata. The separate [DBTL record](DBTL.md) documents engineering decisions and their evidence.
-
-The publication repository preserves a lightweight research handoff. Large model weights, transcriptome references and pretraining corpora remain in the original archive, as recorded in the [inventory](../provenance/archive-inventory.json). The local LAMAR implementation and dataset-generation code remain unavailable, so training and inference require reconstruction. No training, new prediction or wet-lab validation was performed for this publication revision.
+Datasets, analysis code, model-training records, figure sources and reproducibility notes are available in the original [Module 4 GitHub repository](https://github.com/pdx12320/igem_module4). The [DBTL record](DBTL.md) describes the engineering decisions and next iteration. LAMAR is available from its [original source repository](https://github.com/rnasys/LAMAR).
 
 ## References
 
-1. Zhou, H. et al. (2025). A foundation language model to decipher diverse regulation of RNAs. *Genome Biology*, 26, 301. [Article](https://doi.org/10.1186/s13059-025-03752-x). [LAMAR source repository](https://github.com/rnasys/LAMAR).
-2. GENCODE. Human release 50, June 2026. [Human release history](https://www.gencodegenes.org/human/releases.html).
+1. Han, W. et al. (2022). Programmable RNA base editing with a single gRNA-free enzyme. *Nucleic Acids Research*, 50, 9580–9595. [Article](https://doi.org/10.1093/nar/gkac713).
+2. Zhou, H. et al. (2025). A foundation language model to decipher diverse regulation of RNAs. *Genome Biology*, 26, 301. [Article](https://doi.org/10.1186/s13059-025-03752-x).
+3. Mudge, J. M. et al. (2025). GENCODE 2025: reference gene annotation for human and mouse. *Nucleic Acids Research*, 53, D966–D975. [Article](https://doi.org/10.1093/nar/gkae1078).
+4. GENCODE (2026). Human release 50, June 2026. [Human release history](https://www.gencodegenes.org/human/releases.html).
+5. Akiba, T. et al. (2019). Optuna: A next-generation hyperparameter optimization framework. *Proceedings of KDD*, 2623–2631. [Article](https://doi.org/10.1145/3292500.3330701).
+6. Saito, T. & Rehmsmeier, M. (2015). The precision-recall plot is more informative than the ROC plot when evaluating binary classifiers on imbalanced datasets. *PLOS ONE*, 10, e0118432. [Article](https://doi.org/10.1371/journal.pone.0118432).
+7. Joeres, R., Blumenthal, D. B. & Kalinina, O. V. (2025). Data splitting to avoid information leakage with DataSAIL. *Nature Communications*, 16, 3337. [Article](https://doi.org/10.1038/s41467-025-58606-8).

@@ -7,6 +7,6 @@
 
 Keep `figures/` beside these Markdown pages to preserve image links. Each figure directory contains publication exports, a caption, alternative text and provenance metadata. Source tables and scripts live in [figure-sources](../figure-sources/).
 
-The five result figures distinguish checkpoint histories, metrics recomputed from saved Stage I predictions and Stage II values reported only in the source draft. Figure styling does not change the frozen source data, labels or partitions.
+The [workflow](figures/workflow/figure@2x.png) follows the supplied dry-lab slide template and includes an [editable PowerPoint source](figures/workflow/figure.pptx) and [vector PDF](figures/workflow/figure.pdf). The five result figures distinguish checkpoint histories, metrics recomputed from saved Stage I predictions and Stage II values reported only in the source draft. Figure styling does not change the frozen source data, labels or partitions.
 
 The writing follows Modules 1–3: concise English, claim-led result headings, a separate DBTL record and explicit evidence boundaries. The source manuscripts remain available in [provenance/source-documents](../provenance/source-documents/).

@@ -1,0 +1,20 @@
+{
+  "authoring": "Native Microsoft PowerPoint shapes, text and connectors; ORCA template-following workflow",
+  "template": "dry_lab流程图.pptx, slide 5",
+  "template_sha256": "582e47fecaf0cc74e2d7b0c9faebbbf2d0fcd361509832327dd11545755980ee",
+  "native_shapes": 26,
+  "native_connectors": 11,
+  "embedded_images": 0,
+  "png_pixels": [
+    2400,
+    1500
+  ],
+  "editable_source": "figure.pptx",
+  "evaluation_scope": "Stage-specific; Stage II positive regions only; split overlap limits independence; end-to-end screening unevaluated",
+  "exports": {
+    "figure@2x.png": "f4c49eafc8b1df72aba885dfda21648a6d8d593064ee92383c0f00ea38acbed2",
+    "figure.pdf": "f5653bb53fe46ce980f3111a69acdc212bc3c34b76393c13a3be06a7bdca4a2e",
+    "figure.pptx": "d5826b3d0718045f3bf47fec9b48b4e7b41a8591d53f4c5fb44687310f706f49"
+  },
+  "metadata_hygiene": "Author account identifiers removed from public PPTX core properties; native slide content unchanged"
+}
