@@ -107,6 +107,13 @@ def audit(root):
             continue
         published_paths.append(relative.as_posix())
         path = root / relative
+        if entry.get("storage") == "git_history":
+            check(relative.as_posix().startswith("provenance/source-documents/"),
+                  "Only removed prose drafts may be recorded as historical")
+            check(not path.exists(), f"Obsolete draft was restored: {relative}")
+            check(entry.get("repository_revision") == "17a00c641f0a7ce726d65e16c2cca4b58a841431",
+                  "Unexpected historical prose revision")
+            continue
         check(path.is_file(), f"Missing manifest file: {relative}")
         if not path.is_file():
             continue
@@ -118,7 +125,7 @@ def audit(root):
         else:
             transformed += 1
     check(len(published_paths) == len(set(published_paths)), "Duplicate published path in import manifest")
-    report["import_manifest"] = {"entries": len(entries), "byte_identical_entries": byte_identical,
+    report["import_manifest"] = {"entries": len(entries), "historical_prose_entries": sum(e.get("storage") == "git_history" for e in entries), "byte_identical_entries": byte_identical,
                                  "transformed_entries": transformed,
                                  "source_archive_available_required": False,
                                  "note": "Checks published bytes against recorded digests; transformed originals require the source archive for independent verification."}

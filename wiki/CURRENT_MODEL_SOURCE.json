@@ -1,0 +1,44 @@
+{
+  "source_repository": "pdx12320/WIKI_SUSTech-BIO",
+  "source_base_commit": "1d7127f61ce6830a66eb1fb54d371fa715562882",
+  "source_component": "wiki/components/model/module4.html",
+  "includes": "wiki/components/model/conclusions/module4.html",
+  "local_edits": "Stage II evaluation unit clarified as window; obsolete prose copies removed.",
+  "figures": [
+    {
+      "source_path": "static/assets/model/revisions/20261011/module4-figures/figure-1.png",
+      "destination": "wiki/figures/current-model/model-figure-33-panel1.png",
+      "sha256": "5d0cb4b8bfa7c1bd93f6835d17b83801a926bfd5ecb1c1463bd8459f3e4f7b63"
+    },
+    {
+      "source_path": "static/assets/model/revisions/20261011/module4-figures/figure-2.png",
+      "destination": "wiki/figures/current-model/model-figure-34-panel1.png",
+      "sha256": "3cd3cb6bf3ad8b8cfb8e74a9ef6e3010aed3b8c983920a71629b12526dbaf626"
+    },
+    {
+      "source_path": "static/assets/model/revisions/20261011/module4-figures/figure-3_a.png",
+      "destination": "wiki/figures/current-model/model-figure-35-panel1.png",
+      "sha256": "6a6b4bafa0c041cebe0be30932e2b1bc51955f79cde5299b44ffd52d21418f03"
+    },
+    {
+      "source_path": "static/assets/model/revisions/20261011/module4-figures/figure-3_b.png",
+      "destination": "wiki/figures/current-model/model-figure-35-panel2.png",
+      "sha256": "a708c1e5f4ef92001b3941fe6e6a4edd0dd33040c88f6dc9bb0e2b9ef59f3129"
+    },
+    {
+      "source_path": "static/assets/model/revisions/20261011/module4-figures/figure-4.png",
+      "destination": "wiki/figures/current-model/model-figure-36-panel1.png",
+      "sha256": "5ce3a1f5a48298bddf7ebfcd5242b930052ce4642d950a12f323c7e72d65a063"
+    },
+    {
+      "source_path": "static/assets/model/integration-20261013/figures/exclusive_neighbor_composition/figure@2x.png",
+      "destination": "wiki/figures/current-model/model-figure-37-panel1.png",
+      "sha256": "f63f00f08ab5bf85488ab45cf330d5cd2fed8da38c0ce51eb6669324e735bdab"
+    },
+    {
+      "source_path": "static/assets/model/integration-20261013/figures/exclusive_position_difference/figure@2x.png",
+      "destination": "wiki/figures/current-model/model-figure-38-panel1.png",
+      "sha256": "c8421c041c79e10883552e1aad14b61303773ce87633e8934c6d8ecf1e0fca2e"
+    }
+  ]
+}

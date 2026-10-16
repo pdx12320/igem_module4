@@ -7,21 +7,27 @@
       "published_path": "provenance/source-documents/01_WIKI.md",
       "source_sha256": "3e92bc7ea72e30b4efda0bcf2b6496433a7525d22df77fcff74d79d374d7c4c4",
       "published_sha256": "3e92bc7ea72e30b4efda0bcf2b6496433a7525d22df77fcff74d79d374d7c4c4",
-      "transformation": "byte-identical copy"
+      "transformation": "byte-identical copy",
+      "storage": "git_history",
+      "repository_revision": "17a00c641f0a7ce726d65e16c2cca4b58a841431"
     },
     {
       "source_member": "ORCA_EditPredict/02_DBTL.md",
       "published_path": "provenance/source-documents/02_DBTL.md",
       "source_sha256": "b953931d46312bf9c83601daa47397146e4592ba2c749ea5ca363c028110382f",
       "published_sha256": "b953931d46312bf9c83601daa47397146e4592ba2c749ea5ca363c028110382f",
-      "transformation": "byte-identical copy"
+      "transformation": "byte-identical copy",
+      "storage": "git_history",
+      "repository_revision": "17a00c641f0a7ce726d65e16c2cca4b58a841431"
     },
     {
       "source_member": "ORCA_EditPredict/README.md",
       "published_path": "provenance/source-documents/README.md",
       "source_sha256": "fa8dc191029bd3a289a6c9930d095cb45ce96673af20811ab0240188d20de7e5",
       "published_sha256": "fa8dc191029bd3a289a6c9930d095cb45ce96673af20811ab0240188d20de7e5",
-      "transformation": "byte-identical copy"
+      "transformation": "byte-identical copy",
+      "storage": "git_history",
+      "repository_revision": "17a00c641f0a7ce726d65e16c2cca4b58a841431"
     },
     {
       "source_member": "ORCA_EditPredict/config_150M.json",

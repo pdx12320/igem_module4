@@ -8,7 +8,7 @@ This publication copy was organized on 2026-10-11 from `ORCA_EditPredict.zip`, u
 - [Archive inventory](archive-inventory.json): every supplied archive member, its uncompressed size, archive CRC32 and publication status.
 - [Evidence audit](evidence-audit.md): metric definitions, dataset checks, contradictions and limitations.
 - [Publication validation](validation.md): executed checks, figure regeneration and display review.
-- [Source documents](source-documents/): byte-identical original drafts retained for comparison. Their prose is historical source material, not current instructions or independently verified evidence.
+- Historical draft provenance: original hashes and the Git revision are recorded in the import manifest. Obsolete manuscript copies have been removed from the current tree; current prose is in `wiki/module4.md`.
 - [Editorial notes](editorial-notes.md): changes in structure and wording, including supported corrections.
 - [Terminology](terminology.md): names and units used across the Wiki and DBTL.
 

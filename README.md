@@ -1,6 +1,6 @@
 # iGEM Module 4 · LAMAR-guided RNA editing prioritization
+The main Wiki text and figures are synchronized from the current [WIKI_SUSTech-BIO Model page source](https://github.com/pdx12320/WIKI_SUSTech-BIO/tree/main/wiki/components/model). See [source and figure checksums](wiki/CURRENT_MODEL_SOURCE.json).
 
-<img src="wiki/figures/module-icon.svg" width="110" alt="Stylized RNA candidate-prioritization icon">
 
 **Sequence models propose candidates; experiments establish whether those candidates are edited.**
 
@@ -11,7 +11,7 @@ This repository organizes the ORCA_EditPredict archive for the PUF12 RNA editing
 1. **[Main wiki](wiki/module4.md)**: background, model overview, results, discussion, data availability and references.
 2. **[DBTL record](wiki/DBTL.md)**: separate design, build, test and learn decisions, with links to the supporting evidence.
 
-![Module 4 training and proposed screening workflow](wiki/figures/workflow/figure@2x.png)
+![Module 4 training and proposed screening workflow](wiki/figures/current-model/model-figure-33-panel1.png)
 
 The workflow separates model development from the proposed screening application. Download the editable [PowerPoint source](wiki/figures/workflow/figure.pptx) or [vector PDF](wiki/figures/workflow/figure.pdf).
 
@@ -29,7 +29,7 @@ The curve is reconstructed from archived test probabilities. Average precision i
 | `code/historical/` | Supplied training, tokenization and evaluation scripts, tokenizer and model configuration |
 | `figure-sources/` | ORCA redraw scripts, plot inputs and export metadata |
 | `scripts/` | Lightweight repository checks |
-| `provenance/` | Original manuscripts, terminology, editorial corrections and validation records |
+| `provenance/` | Terminology, editorial corrections, historical source hashes and validation records |
 
 ## Evidence and reuse scope
 
@@ -49,6 +49,6 @@ python3 scripts/validate_repository.py
 
 Publication work preserves supplied scientific labels, thresholds, sequences and partitions. Checks and redraws operate on the stored files; no training, new inference, full sequencing reanalysis or wet-lab validation was performed.
 
-The [original source documents](provenance/source-documents/) remain traceable alongside the revised English pages. [ORCA figure sources](figure-sources/) provide the redraw inputs and plotting code. [Validation and audit records](provenance/) record the checks actually executed and their limitations.
+Historical source-document hashes and their Git revision remain traceable in the [import manifest](provenance/import-manifest.json); obsolete draft copies have been removed from the current tree. [ORCA figure sources](figure-sources/) provide the redraw inputs and plotting code. [Validation and audit records](provenance/) record the checks actually executed and their limitations.
 
 The existing repository [MIT license](LICENSE) is retained. LAMAR and externally sourced material retain their respective provenance and applicable rights. See the original [LAMAR paper](https://doi.org/10.1186/s13059-025-03752-x) and [source repository](https://github.com/rnasys/LAMAR).
